@@ -12,6 +12,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "font-face": "^2.3.1",
     "next": "^7.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
