@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Container = styled.div`
   padding-left: 15px;
   padding-right: 15px;
-  border: 1p
 `;
 
 const List = styled.ul`
@@ -22,9 +21,9 @@ const CategoryMenu = ({ categories }) => {
     <Container>
       <List>
         {categories &&
-          categories.map((category, index) => (
-            <Item key={index}>
-              <Category label={category} />
+          categories.map(({ pk, name }) => (
+            <Item key={pk}>
+              <Category label={name} />
             </Item>
           ))}
       </List>
