@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import '../global-styles.css';
+import '../../global-styles.css';
 
 const Meta = ({ title }) => {
   return (
