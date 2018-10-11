@@ -57,6 +57,8 @@ const Button = styled.button`
 `;
 
 const Label = styled.span`
+  font-size: 16px;
+  font-weight: 500;
   padding: 10px 15px;
 `;
 

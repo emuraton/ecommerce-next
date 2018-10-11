@@ -32,10 +32,9 @@ const Dates = styled.p`
 
 const Price = styled.p`
   font-size: 18px;
-  line-height: 22px;
+  line-height: 18px;
   color: rgb(36, 37, 41);
   margin: 3px;
-  line-height: 18px;
 `;
 
 const ProductCard = props => {
