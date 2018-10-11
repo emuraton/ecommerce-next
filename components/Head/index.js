@@ -12,7 +12,7 @@ const Meta = ({ title }) => {
         href="https://fonts.googleapis.com/css?family=Helvetica:300,400,700,800"
         as="font"
         type="font/woff2"
-        crossorigin
+        crossOrigin
       />
     </Head>
   );

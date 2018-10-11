@@ -8,6 +8,8 @@ const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 const Section = styled.section`
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
 `;
 
 const StyledProductCard = styled(ProductCard)`
