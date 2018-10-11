@@ -10,7 +10,11 @@ import productGroups from '../mocks/productGroups';
 export default class extends React.Component {
   static async getInitialProps({ req }) {
     const categories = productGroups
-      ? productGroups.map(group => ({ pk: group.pk, name: group.name }))
+      ? productGroups.map(group => ({
+          pk: group.pk,
+          name: group.name,
+          slug: group.slug,
+        }))
       : [];
     return { categories };
   }

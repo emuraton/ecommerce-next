@@ -18,19 +18,37 @@ const Item = styled.li`
   margin-right: 20px;
 `;
 
-const CategoryMenu = ({ categories }) => {
-  return (
-    <Container>
-      <List>
-        {categories &&
-          categories.map(({ pk, name }) => (
-            <Item key={pk}>
-              <Category label={name} />
-            </Item>
-          ))}
-      </List>
-    </Container>
-  );
-};
+export default class extends React.Component {
+  state = {
+    activeSlug: 'ticket',
+  };
 
-export default CategoryMenu;
+  onClick = e => {
+    e.preventDefault();
+    const activeSlug = { activeSlug: e.currentTarget.name };
+    this.setState(() => activeSlug);
+  };
+
+  render() {
+    const { categories } = this.props;
+    const { activeSlug } = this.state;
+    console.log({ activeSlug });
+    return (
+      <Container>
+        <List>
+          {categories &&
+            categories.map(({ pk, name, slug }) => (
+              <Item key={pk}>
+                <Category
+                  name={name}
+                  slug={slug}
+                  active={slug === activeSlug}
+                  onClick={this.onClick}
+                />
+              </Item>
+            ))}
+        </List>
+      </Container>
+    );
+  }
+}

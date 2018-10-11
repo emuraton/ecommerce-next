@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ifProp } from 'styled-tools';
 
 const Button = styled.button`
   position: relative;
@@ -12,8 +13,16 @@ const Button = styled.button`
   color: rgb(36, 37, 41);
   border-color: rgb(162, 164, 173);
   text-align: center;
-  text-decoration: none;
   outline: none;
+  cursor: pointer;
+
+  ${ifProp(
+    'active',
+    css`
+      background-color: rgb(0, 195, 239);
+      color: white;
+    `,
+  )};
 `;
 
 const Label = styled.span`
@@ -22,11 +31,11 @@ const Label = styled.span`
   padding: 10px 15px;
 `;
 
-const Category = ({ label }) => {
+const Category = ({ slug, name, active, onClick }) => {
   return (
     <div>
-      <Button>
-        <Label>{label}</Label>
+      <Button name={slug} active={active} onClick={onClick}>
+        <Label>{name}</Label>
       </Button>
     </div>
   );
