@@ -5,7 +5,10 @@ import ProductCard from '../ProductCard';
 
 const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
-const Section = styled.section``;
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
 
 const StyledProductCard = styled(ProductCard)`
   display: inline-block;
