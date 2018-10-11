@@ -14,7 +14,6 @@ const Page = () => {
       <Header />
       <CategoryMenu categories={mockedCategories} />
       <ProductList />
-      <p>Welcome to next.js!</p>
     </Fragment>
   );
 };

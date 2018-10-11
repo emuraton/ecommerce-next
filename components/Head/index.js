@@ -1,7 +1,5 @@
 import Head from 'next/head';
 
-import '../../global-styles.css';
-
 const Meta = ({ title }) => {
   return (
     <Head>
