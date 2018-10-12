@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import ProductCard from '../ProductCard';
 
-const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+// const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
 const Section = styled.section`
   display: flex;
@@ -17,12 +17,15 @@ const StyledProductCard = styled(ProductCard)`
   margin: 10px 0 10px 0;
 `;
 
-const ProductList = () => {
+const ProductList = ({ productsByCategories, activeSlug }) => {
+  const products = productsByCategories[activeSlug];
+
   return (
     <Section>
-      {products.map(product => (
-        <StyledProductCard key={product.id} />
-      ))}
+      {products &&
+        products.map(product => (
+          <StyledProductCard key={product.pk} product={product} />
+        ))}
     </Section>
   );
 };

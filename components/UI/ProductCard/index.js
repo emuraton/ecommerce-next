@@ -37,15 +37,15 @@ const Price = styled.p`
   margin: 3px;
 `;
 
-const ProductCard = props => {
-  const { className } = props;
+const ProductCard = ({ className, product }) => {
+  const { name, date_range: dateRange, price } = product;
   return (
     <div className={className}>
       <Link href="#">
         <Image src="https://via.placeholder.com/350x250" alt="placeholder" />
-        <Title>3 Days Pass + Pool Party</Title>
-        <Dates>12-14 October 2018</Dates>
-        <Price>$143.03</Price>
+        <Title>{name}</Title>
+        <Dates>{dateRange}</Dates>
+        <Price>{price}</Price>
       </Link>
     </div>
   );

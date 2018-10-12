@@ -17,17 +17,17 @@ describe('<CategoryMenu />', () => {
     });
   });
 
-  describe('@event handlers', () => {
-    it('onClick', () => {
-      const mockEvent = {
-        currentTarget: { name: 'hotel' },
-        preventDefault: Function.prototype,
-      };
-      const wrapper = shallow(<CategoryMenu {...initialProps} />);
+  // describe('@event handlers', () => {
+  //   it('onClick', () => {
+  //     const mockEvent = {
+  //       currentTarget: { name: 'hotel' },
+  //       preventDefault: Function.prototype,
+  //     };
+  //     const wrapper = shallow(<CategoryMenu {...initialProps} />);
 
-      expect(wrapper.state('activeSlug')).toBe('ticket');
-      wrapper.instance().onClick(mockEvent);
-      expect(wrapper.state('activeSlug')).toBe('hotel');
-    });
-  });
+  //     expect(wrapper.state('activeSlug')).toBe('ticket');
+  //     wrapper.instance().onClick(mockEvent);
+  //     expect(wrapper.state('activeSlug')).toBe('hotel');
+  //   });
+  // });
 });
