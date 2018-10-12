@@ -11,7 +11,7 @@ const Button = styled.button`
   /* background-color: rgba(36, 37, 41, 0.05); */
   background-color: white;
   color: rgb(36, 37, 41);
-  border-color: rgb(162, 164, 173);
+  border: 1px solid rgb(162, 164, 173);
   text-align: center;
   outline: none;
   cursor: pointer;
