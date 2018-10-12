@@ -32,7 +32,6 @@ export default class extends React.Component {
   render() {
     const { categories } = this.props;
     const { activeSlug } = this.state;
-    console.log({ activeSlug });
     return (
       <Container>
         <List>

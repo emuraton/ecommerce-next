@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CategoryMenu /> @renders default render 1`] = `
+<CategoryMenu__Container>
+  <CategoryMenu__List>
+    <CategoryMenu__Item
+      key="1"
+    >
+      <Category
+        active={true}
+        name="Ticket"
+        onClick={[Function]}
+        slug="ticket"
+      />
+    </CategoryMenu__Item>
+    <CategoryMenu__Item
+      key="2"
+    >
+      <Category
+        active={false}
+        name="Hotel"
+        onClick={[Function]}
+        slug="hotel"
+      />
+    </CategoryMenu__Item>
+  </CategoryMenu__List>
+</CategoryMenu__Container>
+`;
