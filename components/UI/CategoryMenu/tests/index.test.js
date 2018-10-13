@@ -9,25 +9,19 @@ describe('<CategoryMenu />', () => {
       { pk: 1, slug: 'ticket', name: 'Ticket', products: [] },
       { pk: 2, slug: 'hotel', name: 'Hotel', products: [] },
     ],
+    slideIndex: 1,
+    onClick: Function.prototype,
   };
   describe('@renders', () => {
     it('default render', () => {
       const wrapper = shallow(<CategoryMenu {...initialProps} />);
       expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('no categories, no display', () => {
+      const props = { ...initialProps, categories: null };
+      const wrapper = shallow(<CategoryMenu {...props} />);
+      expect(toJson(wrapper)).toBe('');
+    });
   });
-
-  // describe('@event handlers', () => {
-  //   it('onClick', () => {
-  //     const mockEvent = {
-  //       currentTarget: { name: 'hotel' },
-  //       preventDefault: Function.prototype,
-  //     };
-  //     const wrapper = shallow(<CategoryMenu {...initialProps} />);
-
-  //     expect(wrapper.state('activeSlug')).toBe('ticket');
-  //     wrapper.instance().onClick(mockEvent);
-  //     expect(wrapper.state('activeSlug')).toBe('hotel');
-  //   });
-  // });
 });

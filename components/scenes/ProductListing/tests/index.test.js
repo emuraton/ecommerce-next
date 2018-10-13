@@ -1,5 +1,4 @@
 import { mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
 
 import ProductListing from '../';
 

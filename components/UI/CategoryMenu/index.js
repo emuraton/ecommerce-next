@@ -20,20 +20,20 @@ const Item = styled.li`
 `;
 
 const CategoryMenu = ({ categories, slideIndex, onClick }) => {
+  if (!categories) return null;
   return (
     <Container>
       <List>
-        {categories &&
-          categories.map(({ pk, name, slug }, index) => (
-            <Item key={pk}>
-              <Category
-                name={name}
-                slug={slug}
-                active={index === slideIndex}
-                onClick={onClick}
-              />
-            </Item>
-          ))}
+        {categories.map(({ pk, name, slug }, index) => (
+          <Item key={pk}>
+            <Category
+              name={name}
+              slug={slug}
+              active={index === slideIndex}
+              onClick={onClick}
+            />
+          </Item>
+        ))}
       </List>
     </Container>
   );

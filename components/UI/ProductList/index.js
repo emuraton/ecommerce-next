@@ -17,17 +17,18 @@ const StyledProductCard = styled(ProductCard)`
 `;
 
 const ProductList = ({ productsByCategories, slideIndex }) => {
+  if (!productsByCategories) return <p>Error: No products found!</p>;
+
   const productGroups = Object.values(productsByCategories);
   return (
     <Carousel wrapAround swiping withoutControls slideIndex={slideIndex}>
-      {productGroups &&
-        productGroups.map((group, index) => (
-          <div key={index}>
-            {group.map(product => (
-              <StyledProductCard key={product.pk} product={product} />
-            ))}
-          </div>
-        ))}
+      {productGroups.map((group, index) => (
+        <div key={index}>
+          {group.map(product => (
+            <StyledProductCard key={product.pk} product={product} />
+          ))}
+        </div>
+      ))}
     </Carousel>
   );
 };

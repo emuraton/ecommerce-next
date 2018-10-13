@@ -30,6 +30,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
     "jest": "^23.6.0",
+    "jest-styled-components": "^6.2.1",
     "prettier": "^1.14.3"
   },
   "prettier": {

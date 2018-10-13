@@ -9,6 +9,7 @@ exports[`<CategoryMenu /> @renders default render 1`] = `
       <Category
         active={false}
         name="Ticket"
+        onClick={[Function]}
         slug="ticket"
       />
     </CategoryMenu__Item>
@@ -16,8 +17,9 @@ exports[`<CategoryMenu /> @renders default render 1`] = `
       key="2"
     >
       <Category
-        active={false}
+        active={true}
         name="Hotel"
+        onClick={[Function]}
         slug="hotel"
       />
     </CategoryMenu__Item>
