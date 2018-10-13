@@ -14,27 +14,34 @@ const Image = styled.img`
 `;
 
 const Title = styled.h2`
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(0, 132, 137);
   line-height: 20px;
-  color: rgb(165, 41, 3);
-  font-weight: 400;
-  margin: 3px;
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 `;
 
 const Dates = styled.p`
-  font-weight: 400;
-  color: rgb(78, 17, 36);
-  margin: 3px;
-  font-size: 14px;
+  font-weight: 500;
+  color: rgb(72, 72, 72);
+  margin-top: 5px;
+  margin-left: 4px;
+  margin-bottom: 0px;
+  font-size: 15px;
   line-height: 18px;
 `;
 
 const Price = styled.p`
-  font-size: 18px;
+  font-weight: 600;
+  color: rgb(72, 72, 72);
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-bottom: 0px;
+  font-size: 15px;
   line-height: 18px;
-  color: rgb(36, 37, 41);
-  margin: 3px;
 `;
 
 const ProductCard = ({ className, product }) => {
