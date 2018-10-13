@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Carousel from 'nuka-carousel';
 
 import ProductCard from '../ProductCard';
-
-// const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
 const Section = styled.section`
   display: flex;
@@ -17,16 +16,19 @@ const StyledProductCard = styled(ProductCard)`
   margin: 10px 0 10px 0;
 `;
 
-const ProductList = ({ productsByCategories, activeSlug }) => {
-  const products = productsByCategories[activeSlug];
-
+const ProductList = ({ productsByCategories, slideIndex }) => {
+  const productGroups = Object.values(productsByCategories);
   return (
-    <Section>
-      {products &&
-        products.map(product => (
-          <StyledProductCard key={product.pk} product={product} />
+    <Carousel wrapAround swiping withoutControls slideIndex={slideIndex}>
+      {productGroups &&
+        productGroups.map((group, index) => (
+          <div key={index}>
+            {group.map(product => (
+              <StyledProductCard key={product.pk} product={product} />
+            ))}
+          </div>
         ))}
-    </Section>
+    </Carousel>
   );
 };
 

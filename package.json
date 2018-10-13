@@ -16,6 +16,7 @@
     "@zeit/next-css": "^1.0.1",
     "font-face": "^2.3.1",
     "next": "^7.0.0",
+    "nuka-carousel": "^4.4.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "styled-components": "^3.4.9",

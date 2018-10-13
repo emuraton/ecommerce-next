@@ -9,8 +9,9 @@ const Container = styled.div`
 `;
 
 const List = styled.ul`
+  display: flex;
+  justify-content: center;
   padding-left: 0px;
-  list-style: none;
 `;
 
 const Item = styled.li`
@@ -18,17 +19,17 @@ const Item = styled.li`
   margin-right: 20px;
 `;
 
-const CategoryMenu = ({ categories, activeSlug, onClick }) => {
+const CategoryMenu = ({ categories, slideIndex, onClick }) => {
   return (
     <Container>
       <List>
         {categories &&
-          categories.map(({ pk, name, slug }) => (
+          categories.map(({ pk, name, slug }, index) => (
             <Item key={pk}>
               <Category
                 name={name}
                 slug={slug}
-                active={slug === activeSlug}
+                active={index === slideIndex}
                 onClick={onClick}
               />
             </Item>

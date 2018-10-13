@@ -4,30 +4,43 @@ import CategoryMenu from '../../UI/CategoryMenu';
 import ProductList from '../../UI/ProductList';
 
 export default class ProductListing extends React.PureComponent {
-  state = {
-    activeSlug: 'ticket',
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      slideIndex: 0,
+    };
+    this.enumCategories = Object.keys(this.props.productsByCategories).reduce(
+      (acc, category, index) => {
+        acc[category] = index;
+        return acc;
+      },
+      {},
+    );
+  }
 
   onClick = e => {
     e.preventDefault();
-    const activeSlug = { activeSlug: e.currentTarget.name };
-    this.setState(() => activeSlug);
+    const name = e.currentTarget.name;
+    this.setState(() => ({
+      slideIndex: this.enumCategories[name],
+    }));
   };
 
   render() {
-    const { activeSlug } = this.state;
+    const { slideIndex } = this.state;
     const { categories, productsByCategories } = this.props;
 
     return (
       <React.Fragment>
         <CategoryMenu
-          activeSlug={activeSlug}
           onClick={this.onClick}
           categories={categories}
+          slideIndex={slideIndex}
         />
         <ProductList
           productsByCategories={productsByCategories}
-          activeSlug={activeSlug}
+          slideIndex={slideIndex}
         />
       </React.Fragment>
     );

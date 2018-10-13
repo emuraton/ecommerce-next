@@ -34,14 +34,14 @@ describe('<ProductListing />', () => {
   describe('@event handlers', () => {
     it('onClick', () => {
       const wrapper = mount(<ProductListing {...initialProps} />);
-      expect(wrapper.state('activeSlug')).toBe(initialProps.categories[0].slug);
+      expect(wrapper.state('slideIndex')).toBe(0);
 
       const categoryButton = wrapper.find('button').at(1);
       categoryButton.simulate('click', {
-        currentTarget: 'hotel',
+        currentTarget: { name: 'hotel' },
         preventDefault: Function.prototype,
       });
-      expect(wrapper.state('activeSlug')).toBe(initialProps.categories[1].slug);
+      expect(wrapper.state('slideIndex')).toBe(1);
     });
   });
 });

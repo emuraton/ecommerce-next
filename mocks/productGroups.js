@@ -26,7 +26,7 @@ const hotelProducts = [
   {
     pk: '13040',
     type: 'hotel',
-    name: 'Best Western Plaza Hotel Stuttgart-Filderstadt',
+    name: 'Best Western Plaza Hotel Stuttgart',
     date_range: '8-9 December 2018',
     price: '$82.67',
   },
