@@ -5,6 +5,7 @@ const ticketProducts = [
     name: 'General Admission Ticket',
     date_range: '8-9 December 2018',
     price: '$143.03',
+    image: 'semf-cover.jpg',
   },
   {
     pk: '13040',
@@ -12,6 +13,7 @@ const ticketProducts = [
     name: 'VIP Ticket',
     date_range: '8-9 December 2018',
     price: '$200.03',
+    image: 'semf-cover.jpg',
   },
   {
     pk: '13040',
@@ -19,6 +21,7 @@ const ticketProducts = [
     name: 'Ticket',
     date_range: '8-9 December 2018',
     price: '$800.67',
+    image: 'semf-cover.jpg',
   },
 ];
 
@@ -29,6 +32,7 @@ const hotelProducts = [
     name: 'A&O Stuttgart City',
     date_range: '7-10 December 2018',
     price: '$18.89',
+    image: 'freehand-los-angeles.jpg',
   },
   {
     pk: '13040',
@@ -36,6 +40,7 @@ const hotelProducts = [
     name: 'Best Western Plaza Hotel Stuttgart',
     date_range: '8-9 December 2018',
     price: '$82.67',
+    image: 'freehand-los-angeles.jpg',
   },
   {
     pk: '13040',
@@ -43,6 +48,7 @@ const hotelProducts = [
     name: 'NH Stuttgart Airport',
     date_range: '8-9 December 2018',
     price: '$87.67',
+    image: 'freehand-los-angeles.jpg',
   },
 ];
 
@@ -53,6 +59,7 @@ const shuttleProducts = [
     name: 'One-Way Shuttle Bus Transfer',
     date_range: '21 October 2018',
     price: '$11.8',
+    image: 'bus-la.jpg',
   },
   {
     pk: '12240',
@@ -60,6 +67,7 @@ const shuttleProducts = [
     name: 'Belgium Arlon Return Trip',
     date_range: '21 October 2018',
     price: '$81.39',
+    image: 'bus-la.jpg',
   },
 ];
 

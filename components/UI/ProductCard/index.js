@@ -45,11 +45,11 @@ const Price = styled.p`
 `;
 
 const ProductCard = ({ className, product }) => {
-  const { name, date_range: dateRange, price } = product;
+  const { name, date_range: dateRange, price, image } = product;
   return (
     <div className={className}>
       <Link href="#">
-        <Image src="https://via.placeholder.com/350x250" alt="placeholder" />
+        <Image src={`/static/${image}`} alt="placeholder" />
         <Title>{name}</Title>
         <Dates>{dateRange}</Dates>
         <Price>{price}</Price>

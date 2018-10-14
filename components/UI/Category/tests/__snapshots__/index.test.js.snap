@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Category /> @render default render 1`] = `
+<div>
+  <Button
+    active={false}
+    name="ticket"
+    onClick={[Function]}
+  >
+    <Category__Label>
+      Ticket
+    </Category__Label>
+  </Button>
+</div>
+`;
