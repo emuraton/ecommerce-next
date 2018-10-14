@@ -27,6 +27,10 @@ export default class ProductListing extends React.PureComponent {
     }));
   };
 
+  onSlide = slideIndex => {
+    this.setState(() => ({ slideIndex: slideIndex }));
+  };
+
   render() {
     const { slideIndex } = this.state;
     const { categories, productsByCategories } = this.props;
@@ -41,6 +45,7 @@ export default class ProductListing extends React.PureComponent {
         <ProductList
           productsByCategories={productsByCategories}
           slideIndex={slideIndex}
+          onSlide={this.onSlide}
         />
       </React.Fragment>
     );

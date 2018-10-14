@@ -42,5 +42,12 @@ describe('<ProductListing />', () => {
       });
       expect(wrapper.state('slideIndex')).toBe(1);
     });
+
+    it('onSlide', () => {
+      const wrapper = mount(<ProductListing {...initialProps} />);
+      expect(wrapper.state('slideIndex')).toBe(0);
+      wrapper.instance().onSlide(1);
+      expect(wrapper.state('slideIndex')).toBe(1);
+    });
   });
 });

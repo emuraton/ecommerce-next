@@ -24,6 +24,7 @@ const Button = styled.button`
     `,
   )};
 `;
+Button.displayName = 'Button';
 
 const Label = styled.span`
   font-size: 16px;

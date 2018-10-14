@@ -16,12 +16,18 @@ const StyledProductCard = styled(ProductCard)`
   margin: 10px 0 10px 0;
 `;
 
-const ProductList = ({ productsByCategories, slideIndex }) => {
+const ProductList = ({ productsByCategories, slideIndex, onSlide }) => {
   if (!productsByCategories) return <p>Error: No products found!</p>;
 
   const productGroups = Object.values(productsByCategories);
   return (
-    <Carousel wrapAround swiping withoutControls slideIndex={slideIndex}>
+    <Carousel
+      wrapAround
+      swiping
+      withoutControls
+      slideIndex={slideIndex}
+      afterSlide={slideIndex => onSlide(slideIndex)}
+    >
       {productGroups.map((group, index) => (
         <div key={index}>
           {group.map(product => (
