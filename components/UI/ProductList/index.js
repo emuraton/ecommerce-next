@@ -25,6 +25,7 @@ const ProductList = ({ productsByCategories, slideIndex, onSlide }) => {
       wrapAround
       swiping
       withoutControls
+      heightMode="current"
       slideIndex={slideIndex}
       afterSlide={slideIndex => onSlide(slideIndex)}
     >
