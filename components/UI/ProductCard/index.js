@@ -1,59 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Link = styled.a`
-  outline: none;
-  text-decoration: none;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  margin-bottom: 7px;
-`;
-
-const Title = styled.h2`
-  font-size: 16px;
-  font-weight: 800;
-  color: rgb(0, 132, 137);
-  line-height: 20px;
-  margin-top: 2px;
-  margin-left: 4px;
-  margin-bottom: 0px;
-  text-transform: uppercase;
-`;
-
-const Dates = styled.p`
-  font-weight: 500;
-  color: rgb(72, 72, 72);
-  margin-top: 5px;
-  margin-left: 4px;
-  margin-bottom: 0px;
-  font-size: 15px;
-  line-height: 18px;
-`;
-
-const Price = styled.p`
-  font-weight: 600;
-  color: rgb(72, 72, 72);
-  margin-top: 2px;
-  margin-left: 4px;
-  margin-bottom: 0px;
-  font-size: 15px;
-  line-height: 18px;
-`;
+import { Card, StaffPick } from './styles';
 
 const ProductCard = ({ className, product }) => {
-  const { name, date_range: dateRange, price, image } = product;
+  const { name, date_range: dateRange, price, image, staffPicked } = product;
   return (
     <div className={className}>
-      <Link href="#">
-        <Image src={`/static/${image}`} alt="placeholder" />
-        <Title>{name}</Title>
-        <Dates>{dateRange}</Dates>
-        <Price>{price}</Price>
-      </Link>
+      <Card.Link href="#">
+        {staffPicked && (
+          <StaffPick.Container>
+            <StaffPick.Label>
+              <span>staff pick</span>
+            </StaffPick.Label>
+          </StaffPick.Container>
+        )}
+        <Card.Image src={`/static/${image}`} alt="placeholder" />
+        <Card.Title>{name}</Card.Title>
+        <Card.Dates>{dateRange}</Card.Dates>
+        <Card.Price>{price}</Card.Price>
+      </Card.Link>
     </div>
   );
 };
