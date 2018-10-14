@@ -4,14 +4,20 @@ import styled from 'styled-components';
 import Category from '../Category';
 
 const Container = styled.div`
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  display: inline-block;
+  background-color: white;
+  z-index: 10;
 `;
 
 const List = styled.ul`
   display: flex;
   justify-content: center;
   padding-left: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 const Item = styled.li`

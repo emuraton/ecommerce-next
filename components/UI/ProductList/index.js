@@ -13,7 +13,7 @@ const Section = styled.section`
 
 const StyledProductCard = styled(ProductCard)`
   display: inline-block;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 15px 0;
 `;
 
 const ProductList = ({ productsByCategories, slideIndex, onSlide }) => {
