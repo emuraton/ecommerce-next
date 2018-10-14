@@ -9,10 +9,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
-    "test": "NODE_ENV=test jest",
-    "flow": "flow",
-    "flow:typed": "npx flow-typed install --overwrite --ignoreDeps peer"
+    "start": "next start",
+    "test": "NODE_ENV=test jest"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -31,7 +29,6 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
-    "flow-bin": "^0.83.0",
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.1",
     "prettier": "^1.14.3"
