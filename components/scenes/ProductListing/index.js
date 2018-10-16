@@ -1,7 +1,8 @@
 import React from 'react';
 
 import CategoryMenu from '../../UI/CategoryMenu';
-import ProductList from '../../UI/ProductList';
+import ProductListMobile from '../../UI/ProductListMobile';
+import SubHeader from '../../UI/SubHeader';
 
 export default class ProductListing extends React.PureComponent {
   constructor(props) {
@@ -37,12 +38,13 @@ export default class ProductListing extends React.PureComponent {
 
     return (
       <React.Fragment>
+        <SubHeader />
         <CategoryMenu
           onClick={this.onClick}
           categories={categories}
           slideIndex={slideIndex}
         />
-        <ProductList
+        <ProductListMobile
           productsByCategories={productsByCategories}
           slideIndex={slideIndex}
           onSlide={this.onSlide}

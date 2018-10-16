@@ -8,7 +8,6 @@ const Button = styled.button`
   list-style: none;
   padding: 12px 10px;
   border-radius: 25px;
-  /* background-color: rgba(36, 37, 41, 0.05); */
   background-color: white;
   color: rgb(36, 37, 41);
   border: 1px solid rgb(162, 164, 173);

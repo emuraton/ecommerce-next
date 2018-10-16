@@ -16,7 +16,7 @@ const StyledProductCard = styled(ProductCard)`
   margin: 10px 0 15px 0;
 `;
 
-const ProductList = ({ productsByCategories, slideIndex, onSlide }) => {
+const ProductListMobile = ({ productsByCategories, slideIndex, onSlide }) => {
   if (!productsByCategories) return <p>Error: No products found!</p>;
 
   const productGroups = Object.values(productsByCategories);
@@ -40,4 +40,4 @@ const ProductList = ({ productsByCategories, slideIndex, onSlide }) => {
   );
 };
 
-export default ProductList;
+export default ProductListMobile;
