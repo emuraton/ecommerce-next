@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Carousel from 'nuka-carousel';
 
-import ProductCard from '../ProductCard';
+import ProductListCard from '../ProductListCard';
 
 const Section = styled.section`
   display: flex;
@@ -11,7 +11,7 @@ const Section = styled.section`
   padding-right: 15px;
 `;
 
-const StyledProductCard = styled(ProductCard)`
+const StyledProductListCard = styled(ProductListCard)`
   display: inline-block;
   margin: 10px 0 15px 0;
 `;
@@ -32,7 +32,7 @@ const ProductListMobile = ({ productsByCategories, slideIndex, onSlide }) => {
       {productGroups.map((group, index) => (
         <div key={index}>
           {group.map(product => (
-            <StyledProductCard key={product.pk} product={product} />
+            <StyledProductListCard key={product.pk} product={product} />
           ))}
         </div>
       ))}
