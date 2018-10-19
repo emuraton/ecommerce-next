@@ -10,7 +10,7 @@ import productGroups from '../mocks/productGroups';
 import '../global-styles.css';
 
 export default class extends React.Component {
-  static async getInitialProps({ req }) {
+  static async getInitialProps() {
     const categories = productGroups
       ? productGroups.map(group => ({
           pk: group.pk,

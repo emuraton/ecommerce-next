@@ -11,30 +11,20 @@ import productGroups from '../mocks/productGroups';
 import '../global-styles.css';
 
 export default class extends React.Component {
-  static async getInitialProps({ req }) {
-    const categories = productGroups
-      ? productGroups.map(group => ({
-          pk: group.pk,
-          name: group.name,
-          slug: group.slug,
-        }))
-      : [];
-    const productsByCategories = productGroups.reduce((acc, group) => {
-      acc[group.slug] = group.products;
-      return acc;
-    }, {});
-
-    return { categories, productsByCategories };
+  static async getInitialProps() {
+    const product = productGroups[1].products[0];
+    return { product };
   }
 
   render() {
-    // const { categories, productsByCategories } = this.props;
+    const { product } = this.props;
+    console.log(product);
 
     return (
       <Fragment>
         <Head title="Product" />
         <Header />
-        <Banner />
+        <Banner product={product} />
       </Fragment>
     );
   }

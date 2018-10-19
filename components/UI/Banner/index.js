@@ -57,19 +57,19 @@ const StyledChevronLeft = styled(ChevronLeft)`
   fill: rgb(196, 1, 114);
 `;
 
-export const Banner = product => {
+export const Banner = ({ product }) => {
   return (
     <Section>
       <BackLinkContainer>
         <BackLink href="#">
           <FlexWrapper>
             <StyledChevronLeft />
-            <Text>Ticket</Text>
+            <Text>Hotel</Text>
           </FlexWrapper>
         </BackLink>
       </BackLinkContainer>
       <div>
-        <Image src="/static/semf-cover.jpg" alt="test" />
+        <Image src={`/static/${product.image}`} alt="test" />
       </div>
     </Section>
   );
