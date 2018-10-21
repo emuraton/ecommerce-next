@@ -19,8 +19,6 @@ export default class extends React.Component {
 
   render() {
     const { product } = this.props;
-    console.log(product);
-
     return (
       <Fragment>
         <Head title="Product" />

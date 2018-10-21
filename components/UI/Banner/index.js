@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ChevronLeft from '../ChevronLeft';
+import ChevronLeft from '../SVG/ChevronLeft';
 
 const Section = styled.section`
   position: relative;

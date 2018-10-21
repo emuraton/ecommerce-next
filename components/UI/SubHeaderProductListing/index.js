@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { prop } from 'styled-tools';
+import styled from 'styled-components';
 
 const List = styled.ul`
   padding: 0;

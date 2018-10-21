@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import MapMarker from '../MapMarker';
+import MapMarker from '../SVG//MapMarker';
 import StarsList from '../StarsList';
 
 const Title = styled.h1`
@@ -42,7 +42,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  margin-top: 10px;
+  margin: 10px 0px;
   padding-left: 10px;
   padding-right: 10px;
 `;
