@@ -5,6 +5,7 @@ import React, { Fragment } from 'react';
 import Head from '../components/Head';
 import Header from '../components/UI/Header';
 import Banner from '../components/UI/Banner';
+import SubHeaderProduct from '../components/UI/SubHeaderProduct';
 
 import productGroups from '../mocks/productGroups';
 
@@ -25,6 +26,7 @@ export default class extends React.Component {
         <Head title="Product" />
         <Header />
         <Banner product={product} />
+        <SubHeaderProduct product={product} />
       </Fragment>
     );
   }
