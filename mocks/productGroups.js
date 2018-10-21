@@ -36,6 +36,7 @@ const hotelProducts = [
     date_range: '7-10 December 2018',
     price: '$18.89',
     image: 'freehand-los-angeles.jpg',
+    distance: '1.9 km',
     staffPicked: true,
   },
   {
@@ -45,6 +46,7 @@ const hotelProducts = [
     date_range: '8-9 December 2018',
     price: '$82.67',
     image: 'freehand-los-angeles.jpg',
+    distance: '12.9 km',
     staffPicked: false,
   },
   {
@@ -54,6 +56,7 @@ const hotelProducts = [
     date_range: '8-9 December 2018',
     price: '$87.67',
     image: 'freehand-los-angeles.jpg',
+    distance: '1.9 km',
     staffPicked: false,
   },
 ];

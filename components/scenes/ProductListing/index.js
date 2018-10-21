@@ -2,7 +2,7 @@ import React from 'react';
 
 import CategoryMenu from '../../UI/CategoryMenu';
 import ProductListMobile from '../../UI/ProductListMobile';
-import SubHeader from '../../UI/SubHeader';
+import SubHeaderProductListing from '../../UI/SubHeaderProductListing';
 
 export default class ProductListing extends React.PureComponent {
   constructor(props) {
@@ -38,7 +38,7 @@ export default class ProductListing extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <SubHeader />
+        <SubHeaderProductListing />
         <CategoryMenu
           onClick={this.onClick}
           categories={categories}
