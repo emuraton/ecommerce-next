@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AmenitiesRow /> @renders with 3 amenities 1`] = `
+<AmenitiesRow__Container>
+  <AmenitiesRow__List>
+    <ListItem
+      key="amentity-0"
+    >
+      <AmenitiesRow__Icon>
+        <Wifi />
+      </AmenitiesRow__Icon>
+      <AmenitiesRow__IconLabel>
+        Wifi
+      </AmenitiesRow__IconLabel>
+    </ListItem>
+    <ListItem
+      key="amentity-1"
+    >
+      <AmenitiesRow__Icon>
+        <Bar />
+      </AmenitiesRow__Icon>
+      <AmenitiesRow__IconLabel>
+        Bar
+      </AmenitiesRow__IconLabel>
+    </ListItem>
+    <ListItem
+      key="amentity-2"
+    >
+      <AmenitiesRow__Icon>
+        <AC />
+      </AmenitiesRow__Icon>
+      <AmenitiesRow__IconLabel>
+        A/C
+      </AmenitiesRow__IconLabel>
+    </ListItem>
+  </AmenitiesRow__List>
+  <ShowMoreButton
+    onClick={[Function]}
+    type="button"
+  >
+    + Show all amenities
+  </ShowMoreButton>
+</AmenitiesRow__Container>
+`;
+
+exports[`<AmenitiesRow /> @renders with more than 3 amenities 1`] = `
+<ShowMoreButton
+  onClick={[Function]}
+  type="button"
+>
+  + Show all amenities
+</ShowMoreButton>
+`;

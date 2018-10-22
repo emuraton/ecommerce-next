@@ -1,68 +1,38 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import MapMarker from '../SVG//MapMarker';
-import StarsList from '../StarsList';
+import AmenitiesRow from '../AmenitiesRow';
 
-const Title = styled.h1`
-  font-size: 30px;
-  font-weight: 800;
-  color: rgb(0, 132, 137);
-  margin-top: 0px;
-  margin-bottom: 5px;
-`;
+import SubHeader from './styles';
 
-// const Container = styled.div`
-//   padding-top: 20px;
-//   padding-bottom: 10px;
-// `;
+const amenities = [
+  { name: 'Wifi', slug: 'wifi' },
+  { name: 'Bar', slug: 'bar' },
+  { name: 'A/C', slug: 'AC' },
+  { name: 'Parking', slug: 'parking' },
+];
 
-const Distance = styled.span`
-  font-weight: 500;
-  color: rgb(72, 72, 72);
-  margin-top: 5px;
-  margin-left: 4px;
-  margin-bottom: 0px;
-  font-size: 15px;
-  line-height: 18px;
-`;
-
-const FestivalName = styled.span`
-  font-weight: 600;
-  color: rgb(72, 72, 72);
-  margin-top: 2px;
-  margin-left: 4px;
-  margin-bottom: 0px;
-  font-size: 15px;
-  line-height: 18px;
-`;
-
-const Container = styled.div`
-  display: inline-block;
-`;
-
-const Wrapper = styled.div`
-  margin: 10px 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-`;
-
-const StyledStarsList = styled(StarsList)`
-  margin-right: 15px;
+const MarginWrapper = styled.div`
+  margin-top: 10px 0;
+  margin-bottom: 20px;
 `;
 
 const SubHeaderProduct = ({ product }) => {
   const { name, distance } = product;
   return (
-    <Wrapper>
-      <Title>{name}</Title>
-      <StyledStarsList nbStars={5} />
-      <Container>
-        <MapMarker />
-        <FestivalName>SEMF</FestivalName>
-        <Distance>{distance} away</Distance>
-      </Container>
-    </Wrapper>
+    <SubHeader.Wrapper>
+      <SubHeader.Title>{name}</SubHeader.Title>
+      <MarginWrapper>
+        <SubHeader.StarsList nbStars={5} />
+        <SubHeader.Container>
+          <MapMarker />
+          <SubHeader.FestivalName>SEMF</SubHeader.FestivalName>
+          <SubHeader.Distance>{distance} away</SubHeader.Distance>
+        </SubHeader.Container>
+      </MarginWrapper>
+      <AmenitiesRow amenities={amenities} />
+    </SubHeader.Wrapper>
   );
 };
 
