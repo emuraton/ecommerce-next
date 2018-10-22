@@ -34,7 +34,7 @@ const Label = styled.span`
 const Category = ({ slug, name, active, onClick }) => {
   return (
     <div>
-      <Button name={slug} active={active} onClick={onClick}>
+      <Button type="button" name={slug} active={active} onClick={onClick}>
         <Label>{name}</Label>
       </Button>
     </div>
