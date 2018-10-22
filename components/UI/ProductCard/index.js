@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, StaffPick } from './styles';
 
-const ProductListCard = ({ className, product }) => {
+const ProductCard = ({ className, product }) => {
   const { name, date_range: dateRange, price, image, staffPicked } = product;
   return (
     <div className={className}>
@@ -25,4 +25,4 @@ const ProductListCard = ({ className, product }) => {
   );
 };
 
-export default ProductListCard;
+export default ProductCard;
