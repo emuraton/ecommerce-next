@@ -13,10 +13,8 @@ const ListItem = styled.li`
   overflow: visible;
   text-align: center;
   width: 33%;
-  /* height: 52px; */
   float: left;
   text-align: left;
-  /* padding-right: 16px; */
 `;
 ListItem.displayName = 'ListItem';
 
@@ -42,6 +40,7 @@ const IconLabel = styled.span`
 const Container = styled.div`
   margin-top: 10px;
   border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
 `;
 
 const ShowMoreButton = styled.button`

@@ -13,25 +13,27 @@ const amenities = [
   { name: 'Parking', slug: 'parking' },
 ];
 
-const MarginWrapper = styled.div`
-  margin-top: 10px 0;
-  margin-bottom: 20px;
-`;
-
 const SubHeaderProduct = ({ product }) => {
   const { name, distance } = product;
   return (
     <SubHeader.Wrapper>
       <SubHeader.Title>{name}</SubHeader.Title>
-      <MarginWrapper>
+      <SubHeader.MarginWrapper>
         <SubHeader.StarsList nbStars={5} />
         <SubHeader.Container>
           <MapMarker />
           <SubHeader.FestivalName>SEMF</SubHeader.FestivalName>
           <SubHeader.Distance>{distance} away</SubHeader.Distance>
         </SubHeader.Container>
-      </MarginWrapper>
+      </SubHeader.MarginWrapper>
       <AmenitiesRow amenities={amenities} />
+      <SubHeader.Paragraph>
+        A&O Stuttgart City is located close to the main train station (6 minutes
+        by tube). The city centre with its many attractions is just a short walk
+        away. The A&O Stuttgart City features 230 brand new rooms (opened summer
+        2015). There is a games room on site and guests can enjoy the on-site
+        snack bar. The property features a 24-hour front desk.
+      </SubHeader.Paragraph>
     </SubHeader.Wrapper>
   );
 };
