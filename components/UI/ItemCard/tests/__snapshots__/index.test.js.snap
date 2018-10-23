@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemCard /> @renders default render 1`] = `
+<styles__Container>
+  <styles__ImageContainer>
+    <styles__Image
+      src="/static/deluxe-room.jpg"
+    />
+  </styles__ImageContainer>
+  <styles__FlexColumn>
+    <styles__H2>
+      Deluxe Room
+    </styles__H2>
+    <styles__List>
+      <styles__ListItem>
+        39 squares meters
+      </styles__ListItem>
+      <styles__ListItem>
+        Free standart WiFi access
+      </styles__ListItem>
+      <styles__ListItem>
+        Free entry to the Infinity Pool
+      </styles__ListItem>
+    </styles__List>
+    <div>
+      <styles__Price>
+        $108
+      </styles__Price>
+      <styles__PerNight>
+        per night
+      </styles__PerNight>
+    </div>
+    <div>
+      <styles__Price
+        disabled={true}
+      >
+        $158
+      </styles__Price>
+      <styles__PerNight
+        disabled={true}
+      >
+        per night
+      </styles__PerNight>
+    </div>
+    <Button
+      onClick={[Function]}
+      type="button"
+    >
+      Book Now
+    </Button>
+  </styles__FlexColumn>
+</styles__Container>
+`;

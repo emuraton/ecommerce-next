@@ -6,6 +6,7 @@ import Head from '../components/Head';
 import Header from '../components/UI/Header';
 import Banner from '../components/UI/Banner';
 import SubHeaderProduct from '../components/UI/SubHeaderProduct';
+import ItemCard from '../components/UI/ItemCard';
 
 import productGroups from '../mocks/productGroups';
 
@@ -25,6 +26,7 @@ export default class extends React.Component {
         <Header />
         <Banner product={product} />
         <SubHeaderProduct product={product} />
+        <ItemCard />
       </Fragment>
     );
   }
