@@ -6,6 +6,18 @@ import ItemCard from '../';
 describe('<ItemCard />', () => {
   const initialProps = {
     onClick: Function.prototype,
+    item: {
+      id: 44,
+      image: 'shared-room.jpg',
+      name: 'Shared room',
+      highlights: [
+        'Bunk bed in dormitory',
+        'Private bathroom',
+        'Flat screen TV',
+      ],
+      price: '$18.89',
+      previousPrice: '$22',
+    },
   };
   describe('@renders', () => {
     it('default render', () => {

@@ -10,7 +10,7 @@ const Section = styled.section`
 
 const BackLinkContainer = styled.div`
   position: absolute;
-  left: 30px;
+  left: 25px;
   top: 20px;
   right: 80px;
   white-space: nowrap;

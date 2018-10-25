@@ -19,8 +19,10 @@ const Image = styled.img`
 `;
 
 const List = styled.ul`
+  max-width: 150px;
   padding-left: 10px;
   margin-top: 6px;
+  word-break: break-word;
 `;
 
 const ListItem = styled.li`

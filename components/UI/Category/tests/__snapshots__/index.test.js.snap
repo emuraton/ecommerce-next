@@ -6,6 +6,7 @@ exports[`<Category /> @render default render 1`] = `
     active={false}
     name="ticket"
     onClick={[Function]}
+    type="button"
   >
     <Category__Label>
       Ticket

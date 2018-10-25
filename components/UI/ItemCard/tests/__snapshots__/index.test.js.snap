@@ -4,27 +4,33 @@ exports[`<ItemCard /> @renders default render 1`] = `
 <styles__Container>
   <styles__ImageContainer>
     <styles__Image
-      src="/static/deluxe-room.jpg"
+      src="/static/shared-room.jpg"
     />
   </styles__ImageContainer>
   <styles__FlexColumn>
     <styles__H2>
-      Deluxe Room
+      Shared room
     </styles__H2>
     <styles__List>
-      <styles__ListItem>
-        39 squares meters
+      <styles__ListItem
+        key="0"
+      >
+        Bunk bed in dormitory
       </styles__ListItem>
-      <styles__ListItem>
-        Free standart WiFi access
+      <styles__ListItem
+        key="1"
+      >
+        Private bathroom
       </styles__ListItem>
-      <styles__ListItem>
-        Free entry to the Infinity Pool
+      <styles__ListItem
+        key="2"
+      >
+        Flat screen TV
       </styles__ListItem>
     </styles__List>
     <div>
       <styles__Price>
-        $108
+        $18.89
       </styles__Price>
       <styles__PerNight>
         per night
@@ -34,7 +40,7 @@ exports[`<ItemCard /> @renders default render 1`] = `
       <styles__Price
         disabled={true}
       >
-        $158
+        $22
       </styles__Price>
       <styles__PerNight
         disabled={true}
