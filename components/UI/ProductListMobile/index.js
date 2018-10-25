@@ -4,13 +4,6 @@ import Carousel from 'nuka-carousel';
 
 import ProductCard from '../ProductCard';
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  padding-right: 15px;
-`;
-
 const StyledProductCard = styled(ProductCard)`
   display: inline-block;
   margin: 10px 0 15px 0;

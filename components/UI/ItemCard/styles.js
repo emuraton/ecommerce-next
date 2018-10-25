@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ifProp } from 'styled-tools';
 
-const Container = styled.section`
+const Container = styled.div`
   display: flex;
 `;
 
@@ -20,7 +20,7 @@ const Image = styled.img`
 
 const List = styled.ul`
   padding-left: 10px;
-  margin-top: 10px;
+  margin-top: 6px;
 `;
 
 const ListItem = styled.li`
@@ -84,6 +84,7 @@ const SubmitButton = styled.button`
   outline: none;
   border-color: transparent;
   font-size: 18px;
+  cursor: pointer;
 `;
 SubmitButton.displayName = 'Button';
 

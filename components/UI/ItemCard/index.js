@@ -2,25 +2,27 @@ import React from 'react';
 
 import Card from './styles';
 
-const ItemCard = ({ onClick }) => {
+const ItemCard = ({ item, onClick, className }) => {
+  if (!item) return null;
+  const { image, name, highlights, price, previousPrice } = item;
   return (
-    <Card.Container>
+    <Card.Container className={className}>
       <Card.ImageContainer>
-        <Card.Image src="/static/deluxe-room.jpg" />
+        <Card.Image src={`/static/${image}`} />
       </Card.ImageContainer>
       <Card.FlexColumn>
-        <Card.H2>Deluxe Room</Card.H2>
+        <Card.H2>{name}</Card.H2>
         <Card.List>
-          <Card.ListItem>39 squares meters</Card.ListItem>
-          <Card.ListItem>Free standart WiFi access</Card.ListItem>
-          <Card.ListItem>Free entry to the Infinity Pool</Card.ListItem>
+          {highlights.map((highlight, index) => (
+            <Card.ListItem key={index}>{highlight}</Card.ListItem>
+          ))}
         </Card.List>
         <div>
-          <Card.Price>$108</Card.Price>
+          <Card.Price>{price}</Card.Price>
           <Card.PerNight>per night</Card.PerNight>
         </div>
         <div>
-          <Card.Price disabled>$158</Card.Price>
+          <Card.Price disabled>{previousPrice}</Card.Price>
           <Card.PerNight disabled>per night</Card.PerNight>
         </div>
         <Card.Button type="button" onClick={onClick}>
