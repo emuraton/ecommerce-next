@@ -34,6 +34,10 @@ const Container = styled.div`
   display: inline-block;
 `;
 
+const LinkMap = styled.a`
+  text-decoration: none;
+`;
+
 const Wrapper = styled.div`
   margin: 10px 0 30px 0;
   padding-left: 10px;
@@ -63,6 +67,7 @@ const SubHeader = {
   Distance,
   FestivalName,
   Container,
+  LinkMap,
   Wrapper,
   StarsList: StyledStarsList,
   Paragraph,
