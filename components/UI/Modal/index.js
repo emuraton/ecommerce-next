@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ifProp } from 'styled-tools';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -10,11 +11,17 @@ const Wrapper = styled.div`
   z-index: 100;
   will-change: transform;
   background: white;
+
+  display: ${ifProp({ openModal: false }, 'none')};
 `;
 
 export default class extends React.Component {
+  static defaultProps = {
+    openModal: false,
+  };
+
   render() {
-    const { children } = this.props;
-    return <Wrapper>{children}</Wrapper>;
+    const { children, openModal } = this.props;
+    return <Wrapper openModal={openModal}>{children}</Wrapper>;
   }
 }
