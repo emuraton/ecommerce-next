@@ -12,16 +12,16 @@ const Wrapper = styled.div`
   will-change: transform;
   background: white;
 
-  display: ${ifProp({ openModal: false }, 'none')};
+  display: ${ifProp({ isOpen: false }, 'none')};
 `;
 
 export default class extends React.Component {
   static defaultProps = {
-    openModal: false,
+    isOpen: false,
   };
 
   render() {
-    const { children, openModal } = this.props;
-    return <Wrapper openModal={openModal}>{children}</Wrapper>;
+    const { children, isOpen } = this.props;
+    return <Wrapper isOpen={isOpen}>{children}</Wrapper>;
   }
 }

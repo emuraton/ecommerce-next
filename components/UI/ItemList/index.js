@@ -9,13 +9,13 @@ const Section = styled.section`
   }
 `;
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, onClick }) => {
   if (!items || items.length === 0) return null;
 
   return (
     <Section>
       {items.map((item, index) => (
-        <ItemCard key={index} item={item} />
+        <ItemCard key={index} item={item} onClick={() => onClick(item)} />
       ))}
     </Section>
   );

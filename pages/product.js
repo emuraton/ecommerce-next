@@ -2,10 +2,7 @@ import React, { Fragment } from 'react';
 
 import Head from '../components/Head';
 import Header from '../components/UI/Header';
-import Banner from '../components/UI/Banner';
-import SubHeaderProduct from '../components/UI/SubHeaderProduct';
-import ItemList from '../components/UI/ItemList';
-
+import ProductDetails from '../components/scenes/ProductDetails';
 
 import productGroups from '../mocks/productGroups';
 import { hotelItems } from '../mocks/items';
@@ -22,11 +19,9 @@ export default class extends React.Component {
     const { product, items } = this.props;
     return (
       <Fragment>
-        <Head title="Product" />
+        <Head title="Product Details" />
         <Header />
-        <Banner product={product} />
-        <SubHeaderProduct product={product} />
-        <ItemList items={items} />
+        <ProductDetails product={product} items={items} />
       </Fragment>
     );
   }
