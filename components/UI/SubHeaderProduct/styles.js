@@ -55,8 +55,7 @@ const Paragraph = styled.p`
 `;
 
 const MarginWrapper = styled.div`
-  margin-top: 10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 const SubHeader = {

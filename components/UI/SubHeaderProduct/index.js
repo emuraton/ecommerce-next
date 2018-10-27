@@ -2,6 +2,7 @@ import React from 'react';
 
 import MapMarker from '../SVG//MapMarker';
 import AmenitiesRow from '../AmenitiesRow';
+import UglyMap from '../UglyMap';
 
 import SubHeader from './styles';
 
@@ -25,6 +26,7 @@ const SubHeaderProduct = ({ product }) => {
           <SubHeader.Distance>{distance} away</SubHeader.Distance>
         </SubHeader.Container>
       </SubHeader.MarginWrapper>
+      <UglyMap src="https://maps.googleapis.com/maps/api/staticmap?size=4000x100&zoom=14&center=48.79307,9.1888013&scale=1&markers=icon:https://festicket.com/static/img/google-maps/indoor.png|48.793102,9.191008" />
       <AmenitiesRow amenities={amenities} />
       <SubHeader.Paragraph>{description}</SubHeader.Paragraph>
     </SubHeader.Wrapper>
