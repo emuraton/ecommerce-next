@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import MapMarker from '../SVG//MapMarker';
 import AmenitiesRow from '../AmenitiesRow';
@@ -14,7 +13,7 @@ const amenities = [
 ];
 
 const SubHeaderProduct = ({ product }) => {
-  const { name, distance } = product;
+  const { name, distance, description } = product;
   return (
     <SubHeader.Wrapper>
       <SubHeader.Title>{name}</SubHeader.Title>
@@ -27,13 +26,7 @@ const SubHeaderProduct = ({ product }) => {
         </SubHeader.Container>
       </SubHeader.MarginWrapper>
       <AmenitiesRow amenities={amenities} />
-      <SubHeader.Paragraph>
-        A&O Stuttgart City is located close to the main train station (6 minutes
-        by tube). The city centre with its many attractions is just a short walk
-        away. The A&O Stuttgart City features 230 brand new rooms (opened summer
-        2015). There is a games room on site and guests can enjoy the on-site
-        snack bar. The property features a 24-hour front desk.
-      </SubHeader.Paragraph>
+      <SubHeader.Paragraph>{description}</SubHeader.Paragraph>
     </SubHeader.Wrapper>
   );
 };

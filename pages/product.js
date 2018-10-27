@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 
-// import ProductListing from '../components/scenes/ProductListing';
-
 import Head from '../components/Head';
 import Header from '../components/UI/Header';
 import Banner from '../components/UI/Banner';
 import SubHeaderProduct from '../components/UI/SubHeaderProduct';
 import ItemList from '../components/UI/ItemList';
+
 
 import productGroups from '../mocks/productGroups';
 import { hotelItems } from '../mocks/items';

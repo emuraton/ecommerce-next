@@ -38,6 +38,8 @@ const hotelProducts = [
     image: 'freehand-los-angeles.jpg',
     distance: '1.9 km',
     staffPicked: true,
+    description:
+      'A&O Stuttgart City is located close to the main train station (6 minutes by tube).The city centre with its many attractions is just a short walk away.The A& O Stuttgart City features 230 brand new rooms(opened summer 2015).There is a games room on site and guests can enjoy the on - site snack bar.The property features a 24 - hour front desk.',
   },
   {
     pk: '13046',
@@ -48,6 +50,8 @@ const hotelProducts = [
     image: 'freehand-los-angeles.jpg',
     distance: '12.9 km',
     staffPicked: false,
+    description:
+      'A&O Stuttgart City is located close to the main train station (6 minutes by tube).The city centre with its many attractions is just a short walk away.The A& O Stuttgart City features 230 brand new rooms(opened summer 2015).There is a games room on site and guests can enjoy the on - site snack bar.The property features a 24 - hour front desk.',
   },
   {
     pk: '13047',
@@ -58,6 +62,8 @@ const hotelProducts = [
     image: 'freehand-los-angeles.jpg',
     distance: '1.9 km',
     staffPicked: false,
+    description:
+      'A&O Stuttgart City is located close to the main train station (6 minutes by tube).The city centre with its many attractions is just a short walk away.The A& O Stuttgart City features 230 brand new rooms(opened summer 2015).There is a games room on site and guests can enjoy the on - site snack bar.The property features a 24 - hour front desk.',
   },
 ];
 
