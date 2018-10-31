@@ -11,8 +11,8 @@ const Wrapper = styled.div`
   z-index: 100;
   will-change: transform;
   background: white;
-
-  display: ${ifProp({ isOpen: false }, 'none')};
+  transform: ${ifProp({ isOpen: false }, 'translateY(100%)', 'translateY(0)')};
+  transition: all 0.3s ease 0s;
 `;
 
 export default class extends React.Component {
