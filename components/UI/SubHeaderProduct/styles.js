@@ -30,11 +30,9 @@ const FestivalName = styled.span`
   line-height: 18px;
 `;
 
-const Container = styled.div`
-  display: inline-block;
-`;
-
 const LinkMap = styled.a`
+  display: flex;
+  align-items: center;
   text-decoration: none;
 `;
 
@@ -66,7 +64,6 @@ const SubHeader = {
   Title,
   Distance,
   FestivalName,
-  Container,
   LinkMap,
   Wrapper,
   StarsList: StyledStarsList,
