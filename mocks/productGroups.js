@@ -2,11 +2,14 @@ const ticketProducts = [
   {
     pk: '12749',
     type: 'ticket',
-    name: 'General Admission Ticket',
+    name: 'General Admission',
     date_range: '8-9 December 2018',
     price: '$143.03',
     image: 'semf-cover.jpg',
     staffPicked: true,
+    description:
+      'Standard access between the times displayed. Please note this is an 18+ event - ID Required.',
+    address: 'Messepiazza 1 70629 Stuttgart, Germany',
   },
   {
     pk: '12750',
@@ -16,6 +19,7 @@ const ticketProducts = [
     price: '$200.03',
     image: 'semf-cover.jpg',
     staffPicked: false,
+    address: 'Messepiazza 1 70629 Stuttgart, Germany',
   },
   {
     pk: '12751',
@@ -25,6 +29,7 @@ const ticketProducts = [
     price: '$800.67',
     image: 'semf-cover.jpg',
     staffPicked: false,
+    address: 'Messepiazza 1 70629 Stuttgart, Germany',
   },
 ];
 
