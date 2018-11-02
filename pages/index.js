@@ -7,8 +7,6 @@ import Head from '../components/Head';
 
 import productGroups from '../mocks/productGroups';
 
-import '../global-styles.css';
-
 export default class extends React.Component {
   static async getInitialProps() {
     const categories = productGroups

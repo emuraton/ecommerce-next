@@ -7,8 +7,6 @@ import ProductDetails from '../components/scenes/ProductDetails';
 import productGroups from '../mocks/productGroups';
 import { hotelItems } from '../mocks/items';
 
-import '../global-styles.css';
-
 export default class extends React.Component {
   static async getInitialProps() {
     const product = productGroups[1].products[0];
