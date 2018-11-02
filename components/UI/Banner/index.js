@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ChevronLeft from '../SVG/ChevronLeft';
+import BackArrow from '../SVG/BackArrow';
 
 const Section = styled.section`
   position: relative;
@@ -17,22 +17,6 @@ const BackLinkContainer = styled.div`
   z-index: 2;
 `;
 
-const BackLink = styled.a`
-  float: left;
-  background-color: white;
-  color: rgb(196, 1, 114);
-  margin-right: 8px;
-  margin-bottom: 4px;
-  max-width: 140px;
-  text-overflow: ellipsis;
-  padding: 10px 15px;
-  /* padding: 5px 8px 4px 8px; */
-  background-color: rgb(255, 255, 255);
-  border-radius: 25px;
-  box-shadow: rgba(36, 37, 41, 0.15) 0px 2px 40px 0px;
-  text-decoration: none;
-`;
-
 const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -40,33 +24,19 @@ const Image = styled.img`
   margin-bottom: 7px;
 `;
 
-const Text = styled.span`
-  font-weight: 600;
-  line-height: 18px;
-  font-size: 16px;
-`;
-
-const FlexWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const StyledChevronLeft = styled(ChevronLeft)`
+const StyledBackArrow = styled(BackArrow)`
+  float: left;
   margin-right: 5px;
-  fill: rgb(196, 1, 114);
+  fill: white;
 `;
 
 export const Banner = ({ product }) => {
   return (
     <Section>
       <BackLinkContainer>
-        <BackLink href="#">
-          <FlexWrapper>
-            <StyledChevronLeft />
-            <Text>Hotel</Text>
-          </FlexWrapper>
-        </BackLink>
+        <a href="/">
+          <StyledBackArrow />
+        </a>
       </BackLinkContainer>
       <div>
         <Image src={`/static/${product.image}`} alt="test" />
