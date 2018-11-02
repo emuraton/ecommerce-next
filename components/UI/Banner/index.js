@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import BackArrow from '../SVG/BackArrow';
+import Share from '../SVG/Share';
 
 const Section = styled.section`
   position: relative;
@@ -9,11 +10,11 @@ const Section = styled.section`
 `;
 
 const BackLinkContainer = styled.div`
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   left: 25px;
-  top: 20px;
-  right: 80px;
-  white-space: nowrap;
+  top: 40px;
   z-index: 2;
 `;
 
@@ -30,12 +31,20 @@ const StyledBackArrow = styled(BackArrow)`
   fill: white;
 `;
 
+const StyledShare = styled(Share)`
+  margin-right: 50px;
+  fill: white;
+`;
+
 export const Banner = ({ product }) => {
   return (
     <Section>
       <BackLinkContainer>
         <a href="/">
           <StyledBackArrow />
+        </a>
+        <a href="#">
+          <StyledShare />
         </a>
       </BackLinkContainer>
       <div>
