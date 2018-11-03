@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { ifProp } from 'styled-tools';
@@ -31,7 +32,14 @@ const Label = styled.span`
   padding: 10px 15px;
 `;
 
-const Category = ({ slug, name, active, onClick }) => {
+type Props = {
+  slug: string,
+  name: string,
+  active: boolean,
+  onClick: (event: SyntheticMouseEvent<any>) => {},
+};
+
+const Category = ({ slug, name, active, onClick }: Props) => {
   return (
     <div>
       <Button type="button" name={slug} active={active} onClick={onClick}>

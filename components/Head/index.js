@@ -1,6 +1,11 @@
+// @flow
 import Head from 'next/head';
 
-const Meta = ({ title }) => {
+type Props = {
+  title: string,
+};
+
+const Meta = ({ title }: Props) => {
   return (
     <Head>
       <title>{title}</title>

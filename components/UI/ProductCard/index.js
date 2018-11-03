@@ -1,8 +1,20 @@
+// @flow
 import React from 'react';
 import Link from 'next/link';
 import { Card, StaffPick } from './styles';
 
-const ProductCard = ({ className, product }) => {
+type Props = {
+  className?: string,
+  product: {
+    date_range: string,
+    name: string,
+    price: string,
+    image: string,
+    staffPicked: boolean,
+  },
+};
+
+const ProductCard = ({ className, product }: Props) => {
   const { name, date_range: dateRange, price, image, staffPicked } = product;
   return (
     <div className={className}>

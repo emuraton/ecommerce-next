@@ -1,8 +1,23 @@
+// @flow
 import React from 'react';
 
 import Card from './styles';
 
-const HotelCard = ({ item, onClick, className }) => {
+type Item = {
+  image: string,
+  name: string,
+  highlights: Array<{ highlight: string }>,
+  price: string,
+  previousPrice: string,
+};
+
+type Props = {
+  item: Item,
+  onClick: (event: SyntheticMouseEvent<any>) => {},
+  className?: string,
+};
+
+const HotelCard = ({ item, onClick, className }: Props) => {
   if (!item) return null;
   const { image, name, highlights, price, previousPrice } = item;
   return (

@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -36,7 +38,13 @@ const StyledShare = styled(Share)`
   fill: white;
 `;
 
-export const Banner = ({ product }) => {
+type Props = {
+  product: {
+    image: string,
+  },
+};
+
+export const Banner = ({ product }: Props) => {
   return (
     <Section>
       <BackLinkContainer>

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import styled from 'styled-components';
 
@@ -25,7 +26,13 @@ const Item = styled.li`
   margin-right: 20px;
 `;
 
-const CategoryMenu = ({ categories, slideIndex, onClick }) => {
+type Props = {
+  categories: Array<{ pk: string, name: string, slug: string }>,
+  slideIndex: number,
+  onClick: (event: SyntheticMouseEvent<any>) => {},
+};
+
+const CategoryMenu = ({ categories, slideIndex, onClick }: Props) => {
   if (!categories) return null;
   return (
     <Container>

@@ -1,11 +1,16 @@
+// @flow
 import React from 'react';
 
 import { Wifi, Parking, Bar, AC } from '../SVG/Amenities';
 import Amenities from './styles';
 
-export const renderAmenity = slug => enumAmenities[slug] || <Wifi />;
+type Props = {
+  amenities: Array<{ slug: string, name: string }>,
+};
 
-const AmenitiesRow = ({ amenities }) => {
+export const renderAmenity = (slug: string) => enumAmenities[slug] || <Wifi />;
+
+const AmenitiesRow = ({ amenities }: Props) => {
   if (!amenities || amenities.length === 0) return null;
   return (
     <Amenities.Container>
