@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ItemCard from '../ItemCard';
+import HotelCard from '../HotelCard';
 
 const Section = styled.section`
   > div:not(:last-child) {
@@ -15,7 +15,7 @@ const ItemList = ({ items, onClick }) => {
   return (
     <Section>
       {items.map((item, index) => (
-        <ItemCard key={index} item={item} onClick={() => onClick(item)} />
+        <HotelCard key={index} item={item} onClick={() => onClick(item)} />
       ))}
     </Section>
   );

@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import ItemCard from '../';
+import HotelCard from '../';
 
-describe('<ItemCard />', () => {
+describe('<HotelCard />', () => {
   const initialProps = {
     onClick: Function.prototype,
     item: {
@@ -21,7 +21,7 @@ describe('<ItemCard />', () => {
   };
   describe('@renders', () => {
     it('default render', () => {
-      const wrapper = shallow(<ItemCard {...initialProps} />);
+      const wrapper = shallow(<HotelCard {...initialProps} />);
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
@@ -34,7 +34,7 @@ describe('<ItemCard />', () => {
         ...initialProps,
         onClick: mockedOnClick,
       };
-      const wrapper = shallow(<ItemCard {...props} />);
+      const wrapper = shallow(<HotelCard {...props} />);
       const button = wrapper.find('Button');
       expect(mockedOnClick).toHaveBeenCalledTimes(0);
       button.simulate('click');

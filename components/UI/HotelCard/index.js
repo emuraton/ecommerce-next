@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from './styles';
 
-const ItemCard = ({ item, onClick, className }) => {
+const HotelCard = ({ item, onClick, className }) => {
   if (!item) return null;
   const { image, name, highlights, price, previousPrice } = item;
   return (
@@ -33,4 +33,4 @@ const ItemCard = ({ item, onClick, className }) => {
   );
 };
 
-export default ItemCard;
+export default HotelCard;
