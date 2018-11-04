@@ -13,7 +13,6 @@ const Title = styled.h1`
 const Distance = styled.span`
   font-weight: 500;
   color: rgb(72, 72, 72);
-  margin-top: 5px;
   margin-left: 4px;
   margin-bottom: 0px;
   font-size: 15px;
@@ -57,6 +56,8 @@ const Paragraph = styled.p`
 `;
 
 const MarginWrapper = styled.div`
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 `;
 
