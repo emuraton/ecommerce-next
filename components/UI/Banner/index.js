@@ -13,9 +13,7 @@ const Section = styled.section`
 `;
 
 const BackLinkContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  position: absolute;
   left: 25px;
   top: 40px;
   z-index: 2;
@@ -29,13 +27,20 @@ const Image = styled.img`
 `;
 
 const StyledBackArrow = styled(BackArrow)`
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  z-index: 2;
   float: left;
   margin-right: 5px;
   fill: white;
 `;
 
 const StyledShare = styled(Share)`
-  margin-right: 50px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  z-index: 2;
   fill: white;
 `;
 
@@ -47,14 +52,12 @@ type Props = {
 
 export const Banner = ({ product }: Props) => (
   <Section>
-    <BackLinkContainer>
-      <a href="/">
-        <StyledBackArrow />
-      </a>
-      <a href="#">
-        <StyledShare />
-      </a>
-    </BackLinkContainer>
+    <a href="/">
+      <StyledBackArrow />
+    </a>
+    <a href="#">
+      <StyledShare />
+    </a>
     <div>
       <Image src={`/static/${product.image}`} alt="test" />
     </div>
