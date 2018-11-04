@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import HotelCard from '../';
+import HotelCard from '..';
 
 describe('<HotelCard />', () => {
   const initialProps = {
@@ -10,11 +10,7 @@ describe('<HotelCard />', () => {
       id: 44,
       image: 'shared-room.jpg',
       name: 'Shared room',
-      highlights: [
-        'Bunk bed in dormitory',
-        'Private bathroom',
-        'Flat screen TV',
-      ],
+      highlights: ['Bunk bed in dormitory', 'Private bathroom', 'Flat screen TV'],
       price: '$18.89',
       previousPrice: '$22',
     },

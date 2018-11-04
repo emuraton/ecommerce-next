@@ -6,14 +6,12 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const UglyMap = ({ className, src, link }) => {
-  return (
-    <div className={className}>
-      <a target="_blank" rel="noopener noreferrer nofollow" href={link}>
-        <Image alt="" src={src} />
-      </a>
-    </div>
-  );
-};
+const UglyMap = ({ className, src, link }) => (
+  <div className={className}>
+    <a target="_blank" rel="noopener noreferrer nofollow" href={link}>
+      <Image alt="" src={src} />
+    </a>
+  </div>
+);
 
 export default UglyMap;

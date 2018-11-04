@@ -18,7 +18,7 @@ export default class ProductDetails extends React.Component {
     };
   }
 
-  onClick = item => {
+  onClick = (item) => {
     this.setState(() => ({
       modal: { isOpen: true, itemSelected: item },
     }));
@@ -35,10 +35,9 @@ export default class ProductDetails extends React.Component {
         <Modal isOpen={modal.isOpen}>
           <Fragment>
             <div
-              onClick={() =>
-                this.setState(() => ({
-                  modal: { isOpen: false, itemSelected: null },
-                }))
+              onClick={() => this.setState(() => ({
+                modal: { isOpen: false, itemSelected: null },
+              }))
               }
             >
               <CloseButton />

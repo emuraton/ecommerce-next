@@ -39,12 +39,7 @@ const CategoryMenu = ({ categories, slideIndex, onClick }: Props) => {
       <List>
         {categories.map(({ pk, name, slug }, index) => (
           <Item key={pk}>
-            <Category
-              name={name}
-              slug={slug}
-              active={index === slideIndex}
-              onClick={onClick}
-            />
+            <Category name={name} slug={slug} active={index === slideIndex} onClick={onClick} />
           </Item>
         ))}
       </List>

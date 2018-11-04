@@ -15,7 +15,9 @@ type Props = {
 };
 
 const ProductCard = ({ className, product }: Props) => {
-  const { name, date_range: dateRange, price, image, staffPicked } = product;
+  const {
+    name, date_range: dateRange, price, image, staffPicked,
+  } = product;
   return (
     <div className={className}>
       <Link href="/product">
@@ -35,6 +37,10 @@ const ProductCard = ({ className, product }: Props) => {
       </Link>
     </div>
   );
+};
+
+ProductCard.defaultProps = {
+  className: '',
 };
 
 export default ProductCard;

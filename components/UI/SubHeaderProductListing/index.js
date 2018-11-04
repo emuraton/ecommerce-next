@@ -32,19 +32,17 @@ const Container = styled.div`
   padding-bottom: 10px;
 `;
 
-const SubHeader = ({ name }) => {
-  return (
-    <Container>
-      <Title>Stuttgart Electronic Music Festival 2018</Title>
-      <List>
-        <ListItem>Stuttgart</ListItem>
-        <ListItem>8 December 2018</ListItem>
-        <ListItem>Electronic</ListItem>
-        <ListItem>House</ListItem>
-        <ListItem>Techno</ListItem>
-      </List>
-    </Container>
-  );
-};
+const SubHeader = (/* { name } */) => (
+  <Container>
+    <Title>Stuttgart Electronic Music Festival 2018</Title>
+    <List>
+      <ListItem>Stuttgart</ListItem>
+      <ListItem>8 December 2018</ListItem>
+      <ListItem>Electronic</ListItem>
+      <ListItem>House</ListItem>
+      <ListItem>Techno</ListItem>
+    </List>
+  </Container>
+);
 
 export default SubHeader;

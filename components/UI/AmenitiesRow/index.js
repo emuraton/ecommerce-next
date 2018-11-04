@@ -1,14 +1,23 @@
 // @flow
 import React from 'react';
 
-import { Wifi, Parking, Bar, AC } from '../SVG/Amenities';
+import {
+  Wifi, Parking, Bar, AC,
+} from '../SVG/Amenities';
 import Amenities from './styles';
+
+const enumAmenities = {
+  wifi: <Wifi />,
+  bar: <Bar />,
+  AC: <AC />,
+  parking: <Parking />,
+};
+
+export const renderAmenity = (slug: string) => enumAmenities[slug] || <Wifi />;
 
 type Props = {
   amenities: Array<{ slug: string, name: string }>,
 };
-
-export const renderAmenity = (slug: string) => enumAmenities[slug] || <Wifi />;
 
 const AmenitiesRow = ({ amenities }: Props) => {
   if (!amenities || amenities.length === 0) return null;
@@ -16,6 +25,7 @@ const AmenitiesRow = ({ amenities }: Props) => {
     <Amenities.Container>
       <Amenities.List>
         {amenities.map((amenity, index) => {
+          // eslint-disable-react/no-array-index-key
           if (index > 2) return null; // Only display first 3 amenities
           return (
             <Amenities.ListItem key={`amentity-${index}`}>
@@ -32,13 +42,6 @@ const AmenitiesRow = ({ amenities }: Props) => {
       )}
     </Amenities.Container>
   );
-};
-
-const enumAmenities = {
-  wifi: <Wifi />,
-  bar: <Bar />,
-  AC: <AC />,
-  parking: <Parking />,
 };
 
 export default AmenitiesRow;

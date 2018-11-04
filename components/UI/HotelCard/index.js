@@ -19,7 +19,9 @@ type Props = {
 
 const HotelCard = ({ item, onClick, className }: Props) => {
   if (!item) return null;
-  const { image, name, highlights, price, previousPrice } = item;
+  const {
+    image, name, highlights, price, previousPrice,
+  } = item;
   return (
     <Card.Container className={className}>
       <Card.ImageContainer>

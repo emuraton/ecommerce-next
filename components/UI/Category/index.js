@@ -39,14 +39,14 @@ type Props = {
   onClick: (event: SyntheticMouseEvent<any>) => {},
 };
 
-const Category = ({ slug, name, active, onClick }: Props) => {
-  return (
-    <div>
-      <Button type="button" name={slug} active={active} onClick={onClick}>
-        <Label>{name}</Label>
-      </Button>
-    </div>
-  );
-};
+const Category = ({
+  slug, name, active, onClick,
+}: Props) => (
+  <div>
+    <Button type="button" name={slug} active={active} onClick={onClick}>
+      <Label>{name}</Label>
+    </Button>
+  </div>
+);
 
 export default Category;
