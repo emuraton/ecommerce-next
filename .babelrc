@@ -1,8 +1,9 @@
 {
   "env": {
     "development": {
-      "presets": ["next/babel", "flow"],
+      "presets": ["next/babel"],
       "plugins": [
+        "transform-flow-strip-types",
         [
           "styled-components",
           {
@@ -15,6 +16,7 @@
     "production": {
       "presets": ["next/babel"],
       "plugins": [
+        "transform-flow-strip-types",
         [
           "styled-components",
           {
@@ -36,7 +38,7 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime",
+        "transform-flow-strip-types",
         [
           "styled-components",
           {
