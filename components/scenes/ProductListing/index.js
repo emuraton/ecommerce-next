@@ -20,7 +20,7 @@ export default class ProductListing extends React.PureComponent {
     );
   }
 
-  onClick = e => {
+  onClick = (e) => {
     e.preventDefault();
     const name = e.currentTarget.name;
     this.setState(() => ({
@@ -28,8 +28,8 @@ export default class ProductListing extends React.PureComponent {
     }));
   };
 
-  onSlide = slideIndex => {
-    this.setState(() => ({ slideIndex: slideIndex }));
+  onSlide = (slideIndex) => {
+    this.setState(() => ({ slideIndex }));
   };
 
   render() {
@@ -39,11 +39,7 @@ export default class ProductListing extends React.PureComponent {
     return (
       <React.Fragment>
         <SubHeaderProductListing />
-        <CategoryMenu
-          onClick={this.onClick}
-          categories={categories}
-          slideIndex={slideIndex}
-        />
+        <CategoryMenu onClick={this.onClick} categories={categories} slideIndex={slideIndex} />
         <ProductListMobile
           productsByCategories={productsByCategories}
           slideIndex={slideIndex}

@@ -1,12 +1,16 @@
 import { mount } from 'enzyme';
 
-import ProductListing from '../';
+import ProductListing from '..';
 
 describe('<ProductListing />', () => {
   const initialProps = {
     categories: [
-      { pk: 1, slug: 'ticket', name: 'Ticket', products: [] },
-      { pk: 2, slug: 'hotel', name: 'Hotel', products: [] },
+      {
+        pk: 1, slug: 'ticket', name: 'Ticket', products: [],
+      },
+      {
+        pk: 2, slug: 'hotel', name: 'Hotel', products: [],
+      },
     ],
     productsByCategories: {
       ticket: [

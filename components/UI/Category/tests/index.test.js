@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
 
-import Category from '../';
+import Category from '..';
 
 describe('<Category />', () => {
   const initialProps = {

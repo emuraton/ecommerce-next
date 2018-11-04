@@ -2,7 +2,7 @@ import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
 
-import StarsList from '../';
+import StarsList from '..';
 
 describe('<StarsList />', () => {
   describe('@renders', () => {

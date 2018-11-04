@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production next start",
     "test": "NODE_ENV=test jest",
+    "flow": "flow",
+    "flow:typed": "npx flow-typed install --overwrite --ignoreDeps peer",
     "lint": "eslint components/** --ext=js --ext=jsx"
   },
   "dependencies": {
@@ -28,9 +30,11 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
+    "flow-bin": "^0.83.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.2.1",

@@ -1,3 +1,6 @@
+// @flow
+// TODO
+/* jsx-a11y/anchor-is-valid: 0 */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -36,22 +39,26 @@ const StyledShare = styled(Share)`
   fill: white;
 `;
 
-export const Banner = ({ product }) => {
-  return (
-    <Section>
-      <BackLinkContainer>
-        <a href="/">
-          <StyledBackArrow />
-        </a>
-        <a href="#">
-          <StyledShare />
-        </a>
-      </BackLinkContainer>
-      <div>
-        <Image src={`/static/${product.image}`} alt="test" />
-      </div>
-    </Section>
-  );
+type Props = {
+  product: {
+    image: string,
+  },
 };
+
+export const Banner = ({ product }: Props) => (
+  <Section>
+    <BackLinkContainer>
+      <a href="/">
+        <StyledBackArrow />
+      </a>
+      <a href="#">
+        <StyledShare />
+      </a>
+    </BackLinkContainer>
+    <div>
+      <Image src={`/static/${product.image}`} alt="test" />
+    </div>
+  </Section>
+);
 
 export default Banner;

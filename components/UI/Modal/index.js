@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import styled from 'styled-components';
 import { ifProp } from 'styled-tools';
 
@@ -15,7 +16,12 @@ const Wrapper = styled.div`
   transition: all 0.3s ease 0s;
 `;
 
-export default class extends React.Component {
+type Props = {
+  isOpen?: boolean,
+  children: React.Node,
+};
+
+export default class extends React.Component<Props> {
   static defaultProps = {
     isOpen: false,
   };

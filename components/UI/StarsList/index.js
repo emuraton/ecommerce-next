@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { prop } from 'styled-tools';
 
-import Star from '../SVG//Star';
+import Star from '../SVG/Star';
 
 const Container = styled.div`
   display: inline-block;
