@@ -3,6 +3,7 @@
 /* jsx-a11y/anchor-is-valid: 0 */
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import BackArrow from '../SVG/BackArrow';
 import Share from '../SVG/Share';
@@ -52,9 +53,11 @@ type Props = {
 
 export const Banner = ({ product }: Props) => (
   <Section>
-    <a href="/">
-      <StyledBackArrow />
-    </a>
+    <Link href="/">
+      <a>
+        <StyledBackArrow />
+      </a>
+    </Link>
     <a href="#">
       <StyledShare />
     </a>

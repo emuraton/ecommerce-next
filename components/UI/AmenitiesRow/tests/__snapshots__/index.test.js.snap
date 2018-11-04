@@ -7,7 +7,9 @@ exports[`<AmenitiesRow /> @renders with 3 amenities 1`] = `
       key="amentity-0"
     >
       <styles__Icon>
-        <Wifi />
+        <Wifi
+          className=""
+        />
       </styles__Icon>
       <styles__IconLabel>
         Wifi
@@ -17,7 +19,9 @@ exports[`<AmenitiesRow /> @renders with 3 amenities 1`] = `
       key="amentity-1"
     >
       <styles__Icon>
-        <Bar />
+        <Bar
+          className=""
+        />
       </styles__Icon>
       <styles__IconLabel>
         Bar
@@ -27,7 +31,9 @@ exports[`<AmenitiesRow /> @renders with 3 amenities 1`] = `
       key="amentity-2"
     >
       <styles__Icon>
-        <AC />
+        <AC
+          className=""
+        />
       </styles__Icon>
       <styles__IconLabel>
         A/C
