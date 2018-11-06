@@ -8,7 +8,6 @@ import MinusIcon from '../SVG/MinusIcon';
 
 const TicketAction = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-left: 20px;
@@ -32,17 +31,23 @@ const Button = styled.button`
 Button.displayName = 'Button';
 
 const Quantity = styled.span`
-  margin-top: 4px;
+  margin: 0 15px;
+  margin-top: 5px;
   color: rgb(0, 132, 137);
   opacity: ${ifProp('isDisabled', 0.2, 1)};
+  font-size: 26px;
 `;
 Quantity.displayName = 'Quantity';
 
 const StyledPlusIcon = styled(PlusIcon)`
+  height: 30px;
+  width: 30px;
   fill: rgb(0, 132, 137);
 `;
 
 const StyledMinusIcon = styled(MinusIcon)`
+  height: 30px;
+  width: 30px;
   fill: rgb(0, 132, 137);
 `;
 
