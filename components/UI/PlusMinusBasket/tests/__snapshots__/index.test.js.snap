@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlusMinusBasket /> @renders default render 1`] = `
+<PlusMinusBasket__TicketAction>
+  <Button
+    element="button"
+    isDisabled={false}
+    onClick={[Function]}
+  >
+    <PlusMinusBasket__StyledPlusIcon />
+  </Button>
+  <Quantity
+    isDisabled={true}
+  >
+    0
+  </Quantity>
+  <Button
+    element="button"
+    isDisabled={true}
+    onClick={[Function]}
+  >
+    <PlusMinusBasket__StyledMinusIcon />
+  </Button>
+</PlusMinusBasket__TicketAction>
+`;
+
+exports[`<PlusMinusBasket /> @renders with quantity > 0 1`] = `
+<PlusMinusBasket__TicketAction>
+  <Button
+    element="button"
+    isDisabled={false}
+    onClick={[Function]}
+  >
+    <PlusMinusBasket__StyledPlusIcon />
+  </Button>
+  <Quantity
+    isDisabled={false}
+  >
+    1
+  </Quantity>
+  <Button
+    element="button"
+    isDisabled={false}
+    onClick={[Function]}
+  >
+    <PlusMinusBasket__StyledMinusIcon />
+  </Button>
+</PlusMinusBasket__TicketAction>
+`;

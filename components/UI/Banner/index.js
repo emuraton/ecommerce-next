@@ -13,13 +13,6 @@ const Section = styled.section`
   margin-top: 20px;
 `;
 
-const BackLinkContainer = styled.div`
-  position: absolute;
-  left: 25px;
-  top: 40px;
-  z-index: 2;
-`;
-
 const Image = styled.img`
   width: 100%;
   height: 100%;
