@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HotelCard /> @renders default render 1`] = `
+<styles__Wrapper>
+  <styles__ColumnContainer>
+    <styles__Test>
+      <styles__TicketDetails>
+        <Ticket
+          className=""
+        />
+        <styles__H2>
+          Second Release Ticket
+        </styles__H2>
+      </styles__TicketDetails>
+      <styles__Price>
+        $123.00
+      </styles__Price>
+    </styles__Test>
+    <PlusMinusBasket
+      onClick={[Function]}
+      quantity={0}
+    />
+  </styles__ColumnContainer>
+</styles__Wrapper>
+`;
