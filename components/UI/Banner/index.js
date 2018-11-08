@@ -44,10 +44,10 @@ type Props = {
   },
 };
 
-export const Banner = ({ product }: Props) => (
+const Banner = ({ product }: Props) => (
   <Section>
     <Link href="/">
-      <a>
+      <a href="/">
         <StyledBackArrow />
       </a>
     </Link>

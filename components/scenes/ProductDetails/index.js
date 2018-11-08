@@ -15,7 +15,27 @@ export default class ProductDetails extends React.Component {
         isOpen: false,
         itemSelected: null,
       },
+      product: [],
+      items: [],
     };
+  }
+
+  // TODO refactor later
+  componentDidMount() {
+    const { productGroups, items } = this.props;
+    const type = this.getProductType();
+    const productGroup = type === 'ticket' ? productGroups[0] : productGroups[1];
+    const product = productGroup.products[0];
+    console.log({ type });
+    const typedItems = items[type];
+    console.log({ items });
+    this.setState(() => ({ product, items: typedItems }));
+  }
+
+  getProductType() {
+    const query = window ? window.location.search.split('=') : null;
+    const type = query && query.length > 1 ? query[1] : 'ticket';
+    return type;
   }
 
   onClick = (item) => {
@@ -25,8 +45,9 @@ export default class ProductDetails extends React.Component {
   };
 
   render() {
-    const { product, items } = this.props;
-    const { modal } = this.state;
+    const { modal, product, items } = this.state;
+    if (items.length === 0) return null;
+
     return (
       <Fragment>
         <Banner product={product} />

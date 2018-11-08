@@ -5,21 +5,20 @@ import Header from '../components/UI/Header';
 import ProductDetails from '../components/scenes/ProductDetails';
 
 import productGroups from '../mocks/productGroups';
-import { hotelItems } from '../mocks/items';
+import items from '../mocks/items';
 
 export default class extends React.Component {
   static async getInitialProps() {
-    const product = productGroups[1].products[0];
-    return { product, items: hotelItems };
+    // TODO refactor later
+    return { productGroups, items };
   }
 
   render() {
-    const { product, items } = this.props;
     return (
       <Fragment>
         <Head title="Product Details" />
         <Header />
-        <ProductDetails product={product} items={items} />
+        <ProductDetails {...this.props} />
       </Fragment>
     );
   }

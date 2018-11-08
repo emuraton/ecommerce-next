@@ -11,16 +11,18 @@ type Props = {
     price: string,
     image: string,
     staffPicked: boolean,
+    type: string,
   },
 };
 
 const ProductCard = ({ className, product }: Props) => {
   const {
-    name, date_range: dateRange, price, image, staffPicked,
+    name, date_range: dateRange, price, image, staffPicked, type,
   } = product;
+  const productLink = { pathname: 'product', query: { type } };
   return (
     <div className={className}>
-      <Link href="/product">
+      <Link href={productLink}>
         <Card.Anchor>
           {staffPicked && (
             <StaffPick.Container>
