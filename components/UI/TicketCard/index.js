@@ -7,9 +7,7 @@ import { Card } from './styles';
 
 type Item = {
   name: string,
-  highlights: Array<{ highlight: string }>,
   price: string,
-  previousPrice: string,
 };
 
 type Props = {
@@ -20,20 +18,18 @@ type Props = {
 
 const TicketCard = ({ item, onClick, className }: Props) => {
   if (!item) return null;
-  // const {
-  //   name, highlights, price, previousPrice,
-  // } = item;
+  const { name, price } = item;
   return (
     <Card.Wrapper className={className}>
       <Card.ColumnContainer>
         <Card.Test>
           <Card.TicketDetails>
             <Ticket />
-            <Card.H2>Second Release Ticket</Card.H2>
+            <Card.H2>{name}</Card.H2>
           </Card.TicketDetails>
-          <Card.Price>$123.00</Card.Price>
+          <Card.Price>{price}</Card.Price>
         </Card.Test>
-        <PlusMinusBasket quantity={0} onClick={() => {}} />
+        <PlusMinusBasket quantity={0} onClick={onClick} />
       </Card.ColumnContainer>
     </Card.Wrapper>
   );

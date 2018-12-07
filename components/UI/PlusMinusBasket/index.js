@@ -31,7 +31,7 @@ const Button = styled.button`
 Button.displayName = 'Button';
 
 const Quantity = styled.span`
-  margin: 0 15px;
+  margin: 0 25px;
   margin-top: 5px;
   color: rgb(0, 132, 137);
   opacity: ${ifProp('isDisabled', 0.2, 1)};

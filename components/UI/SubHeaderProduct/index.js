@@ -14,12 +14,14 @@ const amenities = [
 ];
 
 const SubHeaderProduct = ({ product }) => {
+  if (Object.keys(product).length === 0) return null;
+
   const {
     name, distance, description, type, address,
   } = product;
   const isTicket = type === 'ticket';
   const mapLink = isTicket
-    ? 'https://www.google.com/maps/place/48%C2%B041\'36.2%22N+9%C2%B011\'15.4%22E/@48.693397,9.1854283,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d48.693397!4d9.187617'
+    ? "https://www.google.com/maps/place/48%C2%B041'36.2%22N+9%C2%B011'15.4%22E/@48.693397,9.1854283,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d48.693397!4d9.187617"
     : 'https://www.google.com/maps/dir/?api=1&destination=48.693397,9.187617&origin=48.793102,9.191008';
 
   return (

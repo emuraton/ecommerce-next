@@ -5,7 +5,7 @@ const Wrapper = styled.article`
   position: relative;
   background-color: white;
   border-bottom: 1px solid rgb(226, 227, 230);
-  padding: 25px 20px;
+  padding: 30px 20px;
   border-top: 1px solid rgb(226, 227, 230);
 
   ${ifProp(

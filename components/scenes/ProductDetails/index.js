@@ -17,6 +17,7 @@ export default class ProductDetails extends React.Component {
       },
       product: [],
       items: [],
+      type: null,
     };
   }
 
@@ -26,10 +27,8 @@ export default class ProductDetails extends React.Component {
     const type = this.getProductType();
     const productGroup = type === 'ticket' ? productGroups[0] : productGroups[1];
     const product = productGroup.products[0];
-    console.log({ type });
     const typedItems = items[type];
-    console.log({ items });
-    this.setState(() => ({ product, items: typedItems }));
+    this.setState(() => ({ product, items: typedItems, type }));
   }
 
   getProductType() {
@@ -45,14 +44,16 @@ export default class ProductDetails extends React.Component {
   };
 
   render() {
-    const { modal, product, items } = this.state;
-    if (items.length === 0) return null;
+    const {
+      modal, product, items, type,
+    } = this.state;
+    if (items && items.length === 0) return null;
 
     return (
       <Fragment>
         <Banner product={product} />
         <SubHeaderProduct product={product} />
-        <ItemList items={items} onClick={this.onClick} />
+        <ItemList items={items} type={type} onClick={this.onClick} />
         <Modal isOpen={modal.isOpen}>
           <Fragment>
             <div

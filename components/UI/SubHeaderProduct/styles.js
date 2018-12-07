@@ -36,7 +36,7 @@ const LinkMap = styled.a`
 `;
 
 const Wrapper = styled.div`
-  margin: 10px 0 30px 0;
+  margin: 10px 0 25px 0;
   padding-left: 10px;
   padding-right: 10px;
 `;

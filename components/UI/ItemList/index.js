@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import TicketCard from '../TicketCard';
 import HotelCard from '../HotelCard';
 
 const Section = styled.section`
@@ -22,16 +23,17 @@ type Item = {
 
 type Props = {
   items: Item,
+  type: string,
   onClick: (event: SyntheticMouseEvent<any>) => {},
 };
 
-const ItemList = ({ items, onClick }: Props) => {
+const ItemList = ({ items, onClick, type }: Props) => {
   if (!items || items.length === 0) return null;
-
+  const ItemCard = type === 'ticket' ? TicketCard : HotelCard;
   return (
     <Section>
       {items.map((item, index) => (
-        <HotelCard key={index} item={item} onClick={() => onClick(item)} />
+        <ItemCard key={index} item={item} onClick={() => onClick(item)} />
       ))}
     </Section>
   );
