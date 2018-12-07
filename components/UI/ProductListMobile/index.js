@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Carousel from 'nuka-carousel';
 
@@ -9,7 +9,13 @@ const StyledProductCard = styled(ProductCard)`
   margin: 10px 0 15px 0;
 `;
 
-const ProductListMobile = ({ productsByCategories, slideIndex, onSlide }) => {
+type Props = {
+  productsByCategories: any,
+  slideIndex: number,
+  onSlide: (event: SyntheticMouseEvent<any>) => {},
+};
+
+const ProductListMobile = ({ productsByCategories, slideIndex, onSlide }: Props) => {
   if (!productsByCategories) return <p>Error: No products found!</p>;
 
   const productGroups = Object.values(productsByCategories);
@@ -20,7 +26,7 @@ const ProductListMobile = ({ productsByCategories, slideIndex, onSlide }) => {
       withoutControls
       heightMode="current"
       slideIndex={slideIndex}
-      afterSlide={slideIndex => onSlide(slideIndex)}
+      afterSlide={nextSlideIndex => onSlide(nextSlideIndex)}
     >
       {productGroups.map((group, index) => (
         <div key={index}>

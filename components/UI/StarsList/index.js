@@ -14,12 +14,18 @@ const StyledStars = styled(Star)`
 `;
 StyledStars.displayName = 'Stars';
 
-const StarsList = ({ nbStars, color, className }) => {
+type Props = {
+  nbStars?: number,
+  color?: string,
+  className?: string,
+};
+
+const StarsList = ({ nbStars, color, className }: Props) => {
   if (!nbStars || nbStars === 0) return null;
   return (
     <Container className={className}>
-      {new Array(nbStars).fill(StyledStars).map((Star, index) => (
-        <Star key={`Star-${index}`} color={color} />
+      {new Array(nbStars).fill(StyledStars).map((StarComponent, index) => (
+        <StarComponent key={`Star-${index}`} color={color} />
       ))}
     </Container>
   );
@@ -28,6 +34,7 @@ const StarsList = ({ nbStars, color, className }) => {
 StarsList.defaultProps = {
   nbStars: 0,
   color: 'black',
+  className: null,
 };
 
 export default StarsList;

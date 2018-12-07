@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 
 import Card from './styles';
 
@@ -48,6 +48,10 @@ const HotelCard = ({ item, onClick, className }: Props) => {
       </Card.FlexColumn>
     </Card.Container>
   );
+};
+
+HotelCard.defaultProps = {
+  className: null,
 };
 
 export default HotelCard;

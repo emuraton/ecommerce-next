@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HotelCard /> @renders default render 1`] = `
-<styles__Wrapper>
+exports[`<TicketCard /> @renders default render 1`] = `
+<styles__Wrapper
+  className={null}
+>
   <styles__ColumnContainer>
     <styles__Test>
       <styles__TicketDetails>
@@ -9,11 +11,11 @@ exports[`<HotelCard /> @renders default render 1`] = `
           className=""
         />
         <styles__H2>
-          Second Release Ticket
+          Shared room
         </styles__H2>
       </styles__TicketDetails>
       <styles__Price>
-        $123.00
+        $18.89
       </styles__Price>
     </styles__Test>
     <PlusMinusBasket

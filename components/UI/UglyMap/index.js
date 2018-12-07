@@ -6,12 +6,22 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const UglyMap = ({ className, src, link }) => (
+type Props = {
+  src: string,
+  link: string,
+  className?: string,
+};
+
+const UglyMap = ({ className, src, link }: Props) => (
   <div className={className}>
     <a target="_blank" rel="noopener noreferrer nofollow" href={link}>
       <Image alt="" src={src} />
     </a>
   </div>
 );
+
+UglyMap.defaultProps = {
+  className: null,
+};
 
 export default UglyMap;

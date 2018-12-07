@@ -21,13 +21,10 @@ type Props = {
   children: React.Node,
 };
 
-export default class extends React.Component<Props> {
-  static defaultProps = {
-    isOpen: false,
-  };
+const Modal = ({ children, isOpen }: Props) => <Wrapper isOpen={isOpen}>{children}</Wrapper>;
 
-  render() {
-    const { children, isOpen } = this.props;
-    return <Wrapper isOpen={isOpen}>{children}</Wrapper>;
-  }
-}
+Modal.defaultProps = {
+  isOpen: false,
+};
+
+export default Modal;

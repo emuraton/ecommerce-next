@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import HotelCard from '..';
+import TicketCard from '..';
 
-describe('<HotelCard />', () => {
+describe('<TicketCard />', () => {
   const initialProps = {
     onClick: Function.prototype,
     item: {
@@ -17,24 +17,8 @@ describe('<HotelCard />', () => {
   };
   describe('@renders', () => {
     it('default render', () => {
-      const wrapper = shallow(<HotelCard {...initialProps} />);
+      const wrapper = shallow(<TicketCard {...initialProps} />);
       expect(toJson(wrapper)).toMatchSnapshot();
-    });
-  });
-
-  describe('@events', () => {
-    // TODO refactor test once onClick actually do something
-    it('onClick', () => {
-      const mockedOnClick = jest.fn();
-      const props = {
-        ...initialProps,
-        onClick: mockedOnClick,
-      };
-      const wrapper = shallow(<HotelCard {...props} />);
-      const button = wrapper.find('Button');
-      expect(mockedOnClick).toHaveBeenCalledTimes(0);
-      button.simulate('click');
-      expect(mockedOnClick).toHaveBeenCalledTimes(1);
     });
   });
 });

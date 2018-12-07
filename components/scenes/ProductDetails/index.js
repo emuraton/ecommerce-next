@@ -6,7 +6,22 @@ import ItemList from '../../UI/ItemList';
 import Modal from '../../UI/Modal';
 import CloseButton from '../../UI/SVG/CloseButton';
 
-export default class ProductDetails extends React.Component {
+type Item = {
+  image: string,
+  name: string,
+  highlights: Array<{ highlight: string }>,
+  price: string,
+  previousPrice: string,
+  length: number,
+  map: any,
+};
+
+type Props = {
+  productGroups: Array<{ pk: string }>,
+  items: Array<Item>,
+};
+
+export default class ProductDetails extends React.Component<Props> {
   constructor(props) {
     super(props);
 
@@ -57,6 +72,8 @@ export default class ProductDetails extends React.Component {
         <Modal isOpen={modal.isOpen}>
           <Fragment>
             <div
+              role="button"
+              tabIndex="0"
               onClick={() => this.setState(() => ({
                 modal: { isOpen: false, itemSelected: null },
               }))

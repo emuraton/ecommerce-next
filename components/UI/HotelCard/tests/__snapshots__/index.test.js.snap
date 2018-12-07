@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HotelCard /> @renders default render 1`] = `
-<styles__Container>
+<styles__Container
+  className={null}
+>
   <styles__ImageContainer>
     <styles__Image
       src="/static/shared-room.jpg"

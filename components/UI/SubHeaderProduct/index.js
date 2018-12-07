@@ -13,7 +13,11 @@ const amenities = [
   { name: 'Parking', slug: 'parking' },
 ];
 
-const SubHeaderProduct = ({ product }) => {
+type Props = {
+  product: { name: string, distance: string, description: string, type: string, address: string },
+};
+
+const SubHeaderProduct = ({ product }: Props) => {
   if (Object.keys(product).length === 0) return null;
 
   const {
