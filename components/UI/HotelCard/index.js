@@ -51,7 +51,7 @@ const HotelCard = ({ item, onClick, className }: Props) => {
 };
 
 HotelCard.defaultProps = {
-  className: null,
+  className: '',
 };
 
 export default HotelCard;

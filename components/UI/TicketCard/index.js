@@ -36,7 +36,7 @@ const TicketCard = ({ item, onClick, className }: Props) => {
 };
 
 TicketCard.defaultProps = {
-  className: null,
+  className: '',
 };
 
 export default TicketCard;
