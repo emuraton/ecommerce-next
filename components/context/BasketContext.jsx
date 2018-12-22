@@ -1,7 +1,11 @@
 // @flow
 import * as React from 'react';
 
-const { Provider, Consumer } = React.createContext();
+const { Provider, Consumer } = React.createContext({
+  addToBasket: Function.prototype,
+  removeFromBasket: Function.prototype,
+  basket: {},
+});
 
 type Props = {
   children: React.Node,
@@ -64,15 +68,29 @@ class BasketProvider extends React.Component<Props, State> {
     }
 
     const newTotal = total - price;
+    const newItems = items;
     this.setState(() => ({
-      items,
+      items: newItems,
       total: newTotal,
     }));
   };
 
   render() {
     const { children } = this.props;
-    return <Provider value={this.state}>{children}</Provider>;
+    return (
+      <Provider
+        value={{
+          basket: this.state,
+          addToBasket: this.addToBasket,
+          removeFromBasket: this.removeFromBasket,
+        }}
+      >
+        <React.Fragment>
+          {this.state.total}
+          {children}
+        </React.Fragment>
+      </Provider>
+    );
   }
 }
 

@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import TicketCard from '..';
@@ -17,7 +17,7 @@ describe('<TicketCard />', () => {
   };
   describe('@renders', () => {
     it('default render', () => {
-      const wrapper = shallow(<TicketCard {...initialProps} />);
+      const wrapper = mount(<TicketCard {...initialProps} />);
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });

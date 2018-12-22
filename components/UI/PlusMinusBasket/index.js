@@ -52,17 +52,18 @@ const StyledMinusIcon = styled(MinusIcon)`
 `;
 
 type Props = {
-  onClick: (event: SyntheticMouseEvent<any>) => {},
+  addToBasket: (event: SyntheticMouseEvent<any>) => {},
+  removeFromBasket: (event: SyntheticMouseEvent<any>) => {},
   quantity: number,
 };
 
-const PlusMinusBasket = ({ onClick, quantity }: Props) => (
+const PlusMinusBasket = ({ addToBasket, removeFromBasket, quantity }: Props) => (
   <TicketAction>
-    <Button element="button" onClick={onClick} isDisabled={quantity === 6}>
+    <Button element="button" onClick={addToBasket} isDisabled={quantity === 6}>
       <StyledPlusIcon />
     </Button>
     <Quantity isDisabled={quantity === 0}>{quantity}</Quantity>
-    <Button element="button" onClick={onClick} isDisabled={quantity === 0}>
+    <Button element="button" onClick={removeFromBasket} isDisabled={quantity === 0}>
       <StyledMinusIcon />
     </Button>
   </TicketAction>

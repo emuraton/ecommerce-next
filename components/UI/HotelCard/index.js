@@ -7,7 +7,7 @@ type Item = {
   image: string,
   name: string,
   highlights: Array<{ highlight: string }>,
-  price: string,
+  displayedPrice: string,
   previousPrice: string,
 };
 
@@ -20,7 +20,7 @@ type Props = {
 const HotelCard = ({ item, onClick, className }: Props) => {
   if (!item) return null;
   const {
-    image, name, highlights, price, previousPrice,
+    image, name, highlights, displayedPrice, previousPrice,
   } = item;
   return (
     <Card.Container className={className}>
@@ -35,7 +35,7 @@ const HotelCard = ({ item, onClick, className }: Props) => {
           ))}
         </Card.List>
         <div>
-          <Card.Price>{price}</Card.Price>
+          <Card.Price>{displayedPrice}</Card.Price>
           <Card.PerNight>per night</Card.PerNight>
         </div>
         <div>

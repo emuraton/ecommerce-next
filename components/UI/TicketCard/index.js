@@ -3,11 +3,13 @@ import * as React from 'react';
 
 import PlusMinusBasket from '../PlusMinusBasket';
 import Ticket from '../SVG/Ticket';
+import { BasketConsumer } from '../../context/BasketContext';
+
 import { Card } from './styles';
 
 type Item = {
   name: string,
-  price: string,
+  displayedPrice: string,
 };
 
 type Props = {
@@ -16,22 +18,30 @@ type Props = {
   className?: string,
 };
 
-const TicketCard = ({ item, onClick, className }: Props) => {
+const TicketCard = ({ item }: Props) => {
   if (!item) return null;
-  const { name, price } = item;
+  const { name, displayedPrice } = item;
   return (
-    <Card.Wrapper className={className}>
-      <Card.ColumnContainer>
-        <Card.Test>
-          <Card.TicketDetails>
-            <Ticket />
-            <Card.H2>{name}</Card.H2>
-          </Card.TicketDetails>
-          <Card.Price>{price}</Card.Price>
-        </Card.Test>
-        <PlusMinusBasket quantity={0} onClick={onClick} />
-      </Card.ColumnContainer>
-    </Card.Wrapper>
+    <BasketConsumer>
+      {({ addToBasket, removeFromBasket }) => (
+        <Card.Wrapper>
+          <Card.ColumnContainer>
+            <Card.Test>
+              <Card.TicketDetails>
+                <Ticket />
+                <Card.H2>{name}</Card.H2>
+              </Card.TicketDetails>
+              <Card.Price>{displayedPrice}</Card.Price>
+            </Card.Test>
+            <PlusMinusBasket
+              quantity={0}
+              addToBasket={() => addToBasket(item)}
+              removeFromBasket={() => removeFromBasket(item)}
+            />
+          </Card.ColumnContainer>
+        </Card.Wrapper>
+      )}
+    </BasketConsumer>
   );
 };
 

@@ -5,7 +5,6 @@ exports[`<PlusMinusBasket /> @renders default render 1`] = `
   <Button
     element="button"
     isDisabled={false}
-    onClick={[Function]}
   >
     <PlusMinusBasket__StyledPlusIcon />
   </Button>
@@ -17,7 +16,6 @@ exports[`<PlusMinusBasket /> @renders default render 1`] = `
   <Button
     element="button"
     isDisabled={true}
-    onClick={[Function]}
   >
     <PlusMinusBasket__StyledMinusIcon />
   </Button>
@@ -29,7 +27,6 @@ exports[`<PlusMinusBasket /> @renders with quantity > 0 1`] = `
   <Button
     element="button"
     isDisabled={false}
-    onClick={[Function]}
   >
     <PlusMinusBasket__StyledPlusIcon />
   </Button>
@@ -41,7 +38,6 @@ exports[`<PlusMinusBasket /> @renders with quantity > 0 1`] = `
   <Button
     element="button"
     isDisabled={false}
-    onClick={[Function]}
   >
     <PlusMinusBasket__StyledMinusIcon />
   </Button>

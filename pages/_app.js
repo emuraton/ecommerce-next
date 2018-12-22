@@ -1,6 +1,8 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 
+import { BasketProvider } from '../components/context/BasketContext';
+
 import '../global-styles.css';
 
 export default class MyApp extends App {
@@ -19,7 +21,7 @@ export default class MyApp extends App {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateState);
-    //TODO use express-device to get screen size from SSR
+    // TODO use express-device to get screen size from SSR
     this.updateState();
   }
 
@@ -39,7 +41,9 @@ export default class MyApp extends App {
     return (
       <Container>
         {isMobile ? (
-          <Component {...pageProps} />
+          <BasketProvider>
+            <Component {...pageProps} />
+          </BasketProvider>
         ) : (
           <React.Fragment>
             <div>App only supports mobile device screen size !</div>

@@ -6,10 +6,16 @@ describe('<ProductListing />', () => {
   const initialProps = {
     categories: [
       {
-        pk: 1, slug: 'ticket', name: 'Ticket', products: [],
+        pk: 1,
+        slug: 'ticket',
+        name: 'Ticket',
+        products: [],
       },
       {
-        pk: 2, slug: 'hotel', name: 'Hotel', products: [],
+        pk: 2,
+        slug: 'hotel',
+        name: 'Hotel',
+        products: [],
       },
     ],
     productsByCategories: {
@@ -19,7 +25,7 @@ describe('<ProductListing />', () => {
           type: 'ticket',
           name: 'General Admission Ticket',
           date_range: '8-9 December 2018',
-          price: '$143.03',
+          displayedPrice: '$143.03',
         },
       ],
       hotel: [
@@ -28,7 +34,7 @@ describe('<ProductListing />', () => {
           type: 'hotel',
           name: 'A&O Stuttgart City',
           date_range: '7-10 December 2018',
-          price: '$18.89',
+          displayedPrice: '$18.89',
         },
       ],
     },
