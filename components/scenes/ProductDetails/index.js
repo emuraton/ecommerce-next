@@ -17,8 +17,9 @@ type Item = {
 };
 
 type Props = {
-  productGroups: Array<{ pk: string }>,
+  product: Array<{ pk: string }>,
   items: Array<Item>,
+  type: String,
 };
 
 export default class ProductDetails extends React.Component<Props> {
@@ -30,26 +31,7 @@ export default class ProductDetails extends React.Component<Props> {
         isOpen: false,
         itemSelected: null,
       },
-      product: [],
-      items: [],
-      type: null,
     };
-  }
-
-  // TODO refactor later
-  componentDidMount() {
-    const { productGroups, items } = this.props;
-    const type = this.getProductType();
-    const productGroup = type === 'ticket' ? productGroups[0] : productGroups[1];
-    const product = productGroup.products[0];
-    const typedItems = items[type];
-    this.setState(() => ({ product, items: typedItems, type }));
-  }
-
-  getProductType() {
-    const query = window ? window.location.search.split('=') : null;
-    const type = query && query.length > 1 ? query[1] : 'ticket';
-    return type;
   }
 
   onClick = (item) => {
@@ -59,9 +41,8 @@ export default class ProductDetails extends React.Component<Props> {
   };
 
   render() {
-    const {
-      modal, product, items, type,
-    } = this.state;
+    const { product, items, type } = this.props;
+    const { modal } = this.state;
     if (items && items.length === 0) return null;
 
     return (

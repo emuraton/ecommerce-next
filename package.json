@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
+    "start": "NODE_ENV=production node server.js",
     "test": "NODE_ENV=test jest",
     "flow": "flow",
     "flow:typed": "npx flow-typed install --overwrite --ignoreDeps peer",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "express": "^4.16.4",
     "font-face": "^2.3.1",
     "next": "^7.0.0",
     "nuka-carousel": "^4.4.1",

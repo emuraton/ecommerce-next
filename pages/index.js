@@ -11,10 +11,10 @@ export default class extends React.Component {
   static async getInitialProps() {
     const categories = productGroups
       ? productGroups.map(group => ({
-          pk: group.pk,
-          name: group.name,
-          slug: group.slug,
-        }))
+        pk: group.pk,
+        name: group.name,
+        slug: group.slug,
+      }))
       : [];
     const productsByCategories = productGroups.reduce((acc, group) => {
       acc[group.slug] = group.products;
@@ -31,10 +31,7 @@ export default class extends React.Component {
       <Fragment>
         <Head title="Product Listing" />
         <Header />
-        <ProductListing
-          categories={categories}
-          productsByCategories={productsByCategories}
-        />
+        <ProductListing categories={categories} productsByCategories={productsByCategories} />
       </Fragment>
     );
   }
