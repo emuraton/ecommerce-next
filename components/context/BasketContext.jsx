@@ -85,10 +85,7 @@ class BasketProvider extends React.Component<Props, State> {
           removeFromBasket: this.removeFromBasket,
         }}
       >
-        <React.Fragment>
-          {this.state.total}
-          {children}
-        </React.Fragment>
+        <React.Fragment>{children}</React.Fragment>
       </Provider>
     );
   }

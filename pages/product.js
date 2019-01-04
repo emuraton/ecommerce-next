@@ -8,9 +8,13 @@ import productGroups from '../mocks/productGroups';
 import items from '../mocks/items';
 
 export default class extends React.Component {
-  static async getInitialProps() {
-    // TODO refactor later
-    return { productGroups, items };
+  static async getInitialProps({ query }) {
+    const { type } = query;
+    const productGroup = type === 'ticket' ? productGroups[0] : productGroups[1];
+    const product = productGroup.products[0];
+    const typedItems = items[type];
+
+    return { product, items: typedItems, type };
   }
 
   render() {
