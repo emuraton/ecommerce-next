@@ -1,5 +1,7 @@
 const express = require('express');
 const next = require('next');
+const { createReadStream } = require('fs');
+const { parse } = require('url');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -15,7 +17,16 @@ app
       app.render(req, res, '/product', params);
     });
 
-    server.get('*', (req, res) => handle(req, res));
+    server.get('*', (req, res) => {
+      const parsedUrl = parse(req.url, true);
+      const { pathname } = parsedUrl;
+      if (pathname === '/sw.js') {
+        res.setHeader('content-type', 'text/javascript');
+        createReadStream('./sw.js').pipe(res);
+      } else {
+        handle(req, res);
+      }
+    });
 
     server.listen(3000, (err) => {
       if (err) throw err;
