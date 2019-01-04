@@ -19,7 +19,7 @@ const ProductCard = ({ className, product }: Props) => {
   const {
     name, date_range: dateRange, price, image, staffPicked, type,
   } = product;
-  const productLink = { pathname: 'product', query: { type } };
+  const productLink = { pathname: `shop/product/${type}` };
   return (
     <div className={className}>
       <Link href={productLink}>

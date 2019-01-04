@@ -17,7 +17,7 @@ type Item = {
 };
 
 type Props = {
-  product: Array<{ pk: string }>,
+  product: { pk: string },
   items: Array<Item>,
   type: String,
 };
