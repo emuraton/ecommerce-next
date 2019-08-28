@@ -2,6 +2,7 @@ import React from 'react';
 import App, { Container } from 'next/app';
 
 import { BasketProvider } from '../components/context/BasketContext';
+import PleaseResizeButton from '../components/PleaseResizeButton';
 
 import '../global-styles.css';
 
@@ -45,10 +46,7 @@ export default class MyApp extends App {
             <Component {...pageProps} />
           </BasketProvider>
         ) : (
-          <React.Fragment>
-            <div>App only supports mobile device screen size !</div>
-            <div>Please resize your screen or use your phone to use it :)</div>
-          </React.Fragment>
+          <PleaseResizeButton />
         )}
       </Container>
     );
