@@ -2,7 +2,7 @@ import React from 'react';
 import App, { Container } from 'next/app';
 
 import { BasketProvider } from '../components/context/BasketContext';
-import PleaseResizeButton from '../components/PleaseResizeButton';
+import PleaseResizeCard from '../components/PleaseResizeCard';
 
 import '../global-styles.css';
 
@@ -46,7 +46,7 @@ export default class MyApp extends App {
             <Component {...pageProps} />
           </BasketProvider>
         ) : (
-          <PleaseResizeButton />
+          <PleaseResizeCard />
         )}
       </Container>
     );

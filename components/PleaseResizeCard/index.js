@@ -13,11 +13,11 @@ const Container = styled.div`
   box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
 `;
 
-const PleaseResizeButton = () => (
+const PleaseResizeCard = () => (
   <Container>
-    <div>Website only supports mobile devices!</div>
+    <div>This website only supports mobile devices!</div>
     <div>Please resize your screen or visit this site with your phone :)</div>
   </Container>
 );
 
-export default PleaseResizeButton;
+export default PleaseResizeCard;
