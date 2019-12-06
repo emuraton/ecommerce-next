@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "now-build": "next build",
     "start": "NODE_ENV=production node server.js",
     "test": "NODE_ENV=test jest",
     "flow": "flow",
@@ -16,17 +17,17 @@
     "lint": "eslint components/** --ext=js --ext=jsx"
   },
   "dependencies": {
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "@zeit/next-css": "^1.0.1",
     "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "express": "^4.16.4",
     "font-face": "^2.3.1",
-    "next": "^7.0.0",
+    "next": "^9.1.4",
     "nuka-carousel": "^4.4.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "styled-components": "^3.4.9",
-    "styled-tools": "^1.5.1",
-    "@zeit/next-css": "^1.0.1"
+    "styled-tools": "^1.5.1"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
